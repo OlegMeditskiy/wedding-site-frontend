@@ -53,7 +53,6 @@ const Program =(props)=>{
     return(
         <div id={"program"} className={"mainPageBlock odBlock"}>
             <h1  style={{"marginBottom":"50px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
-                {/*<DisplayParts {...props} update={getProgramFromAPI} programList={program.programsParts} />*/}
             <Row>
                 <Col md={{span:2,offset:5}}>
                     <h3 className={"text-center"}>29 августа</h3>
