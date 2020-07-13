@@ -54,7 +54,7 @@ const Program =(props)=>{
         <div id={"program"} className={"mainPageBlock odBlock"}>
             <h1  style={{"marginBottom":"50px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
             <Row>
-                <Col md={{span:2,offset:5}}>
+                <Col md={{span:4,offset:4}}>
                     <h3 className={"text-center"}>29 августа</h3>
                     <div className={"site-text"}>
                         <div className={"text-center"}>
