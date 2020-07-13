@@ -3,6 +3,11 @@ import {getProgram} from "../../util/GetAPI";
 import ProgramsPart from "./ProgramsPart";
 import {API_BASE_URL, translation} from "../../constants";
 import {Col, Image, Row} from "react-bootstrap";
+import guests from "../../assets/guests.png";
+import starters from "../../assets/starters.png";
+import arch from "../../assets/arch.png";
+import cake from "../../assets/cake.png";
+import DJ from "../../assets/DJ.png";
 
 const Program =(props)=>{
     const [program,setProgram]=useState(
@@ -54,19 +59,23 @@ const Program =(props)=>{
                     <h3 className={"text-center"}>29 августа</h3>
                     <div className={"site-text"}>
                         <div className={"text-center"}>
-                        <Image style={{"height":"100px"}} src={API_BASE_URL+"/admin/files/guests.png"}></Image>
+                        <Image style={{"height":"100px"}} src={guests}></Image>
                         <p>15:00 - Сбор гостей</p>
                     </div>
                         <div className={"text-center"}>
-                            <Image style={{"height":"100px"}} src={API_BASE_URL+"/admin/files/starters.png"}></Image>
+                            <Image style={{"height":"100px"}} src={starters}></Image>
                             <p>Приветственный фуршет</p>
                         </div>
                         <div className={"text-center"}>
-                            <Image style={{"height":"100px"}} src={API_BASE_URL+"/admin/files/cake.png"}></Image>
+                            <Image style={{"height":"100px"}} src={arch}></Image>
+                            <p>16:00 - Торжественная церемония</p>
+                        </div>
+                        <div className={"text-center"}>
+                            <Image style={{"height":"100px"}} src={cake}></Image>
                             <p>Праздничный ужин</p>
                         </div>
                         <div className={"text-center"}>
-                            <Image style={{"height":"100px"}} src={API_BASE_URL+"/admin/files/DJ.png"}></Image>
+                            <Image style={{"height":"100px"}} src={DJ}></Image>
                             <p>Веселье и танцы до упаду</p>
                         </div></div>
 
