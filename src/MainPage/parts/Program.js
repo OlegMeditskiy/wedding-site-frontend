@@ -55,6 +55,7 @@ const Program =(props)=>{
             <Row>
                 <Col lg={6} xl={6}>
                     <h1  style={{"marginBottom":"50px","marginTop":"30px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
+
                     <h3 className={"text-center"}>29 августа</h3>
                     <div className={"site-text"}>
                         <div className={"text-center"}>
