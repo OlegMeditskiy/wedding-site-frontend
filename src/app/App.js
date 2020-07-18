@@ -11,7 +11,6 @@ import AdminPage from "../Admin/AdminPage";
 import addNotification, {Notifications} from 'react-push-notification';
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import MainPage from "../MainPage/MainPage";
-import InvitationForPerson from "../MainPage/InvitationForPerson";
 
 class App extends Component {
     constructor(props) {
@@ -86,7 +85,7 @@ class App extends Component {
 
     componentDidMount() {
         this.loadLanguage();
-        this.loadCurrentUser();
+        // this.loadCurrentUser();
     }
 
     handleLogout() {
@@ -126,8 +125,6 @@ class App extends Component {
                                        render={(props) => <Login onLogin={this.handleLogin} {...props} />}/>
                                        <Route exact path="/"
                                               render={(props) => <MainPage />}/>
-                                <Route path="/invitation/:invitationKey"
-                                       render={(props) => <InvitationForPerson {...props}/>}/>
                                 {(this.state.isAuthenticated!==null)?<PrivateRoute authenticated={this.state.isAuthenticated} path="/admin" handleLogout={this.handleLogout}
                                                                                    currentUser={this.state.currentUser} language={this.state.language}  component={AdminPage} />:null}
                                 <Route component={NotFound}/>
@@ -137,7 +134,7 @@ class App extends Component {
                             <Container>
                                 <Row className="justify-content-md-center">
                                     <Col  md={"auto"}>
-                                        <a target={"_blank"} href="https://www.instagram.com/oleg.meditskiy/"><Image style={{"height":"50px","padding":"10px 0px 10px 0px"}} src={API_BASE_URL+"/admin/files/OlegMeditskiy.png"}></Image></a>
+                                        {/*<a target={"_blank"} href="https://www.instagram.com/oleg.meditskiy/"><Image style={{"height":"50px","padding":"10px 0px 10px 0px"}} src={API_BASE_URL+"/admin/files/OlegMeditskiy.png"}></Image></a>*/}
 
                                         {/*<Button onClick={this._onSetLanguageToRussian} className={"languageButton"} type={"submit"}><FlagIcon code={"ru"} size={"2x"} /></Button>*/}
                                         {/*    <Button onClick={this._onSetLanguageToEnglish} className={"languageButton"} type={"submit"}><FlagIcon code={"gb"} size={"2x"} /></Button>*/}

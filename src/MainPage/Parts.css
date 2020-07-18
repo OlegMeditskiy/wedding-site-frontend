@@ -1,65 +1,110 @@
+/*
+* === NAVIGATION ===
+*/
+.navbar-light .navbar-nav .nav-link{
+    /*color: white!important;*/
+    font-family: 'Playfair Display', serif;
+    font-size:20px;
+}
+.whiteNavbar{
+    background-color: 	#090605;
+}
+
+.nav-link{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+/*
+* === HEADER ===
+*/
+
+.timerBlock{
+    background-color: #00000085;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    line-height: 2;
+}
+.blockText{
+    font-family: 'Playfair Display', serif;
+    padding: 10px;
+    width: 1200px;
+    position: absolute;
+    bottom: 288px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.datePlace {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+}
+.inviteText{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+}
+.hashtag{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+}
+
+
+/*
+* === TIMER ===
+*/
+
+.timer{
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+}
+
+.Countdown{
+    margin: 10px auto;
+    padding-bottom: 20px;
+}
+.circle{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    border: 4px white solid;
+}
+
+.Countdown-col{
+    display: inline-block;
+}
+
+.Countdown-col-element{
+    display: inline-block;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+* === SITE BLOCKS ===
+*/
+
 .mainPageBlock{
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 70px;
     padding-left: 15px;
 }
-.bandMainPage {
-    position: absolute;
-    left: calc(50% - 88px);
-    padding: 40px;
-}
 
-@media (max-width: 768px) {
-
-    #logo{
-        display: none;
-    }
-    .header {
-        margin: -7% -15% -17% -57%;
-        width: 200%;
-    }
-    .acceptButtons{
-        margin-bottom: 20px;
-    }
-    #invitation{
-        background-size:     cover;                      /* <------ */
-        background: none no-repeat center center;
-
-    }
-}
-
-@media (min-width: 769px) {
-    .header{
-        margin: -2% -15% -11% -22%;
-        width: 130%;
-    }
-
-}
-#invitation{
-    background-size:     cover;                      /* <------ */
-    background: url("../assets/invite2.jpg") no-repeat center center;
-
-}
-
-.navbar-light .navbar-nav .nav-link{
-    color: white!important;
-    font-family: 'Marck Script', cursive;
-    font-size:30px;
-}
-.title{
-
-    font-family: 'Marck Script', cursive;
-
-}
-.site-text{
-    font-size: 21px;
-}
-.whiteNavbar{
-    background-color: 	#7e695b;
-}
-.headline{
-    position: relative;
-}
 .odBlock{
     background-color: #4e4038 ;
     color: beige;
@@ -68,10 +113,23 @@
     background-color: #2a221f;
     color: beige;
 }
-.nav-link{
-    font-family: "DejaVu Serif";
-    font-size: 18px;
+
+/*
+* === SITE TEXT ===
+*/
+
+.title{
+    font-family: 'Playfair Display', serif;
 }
+.site-text{
+    font-size: 21px;
+}
+
+.headline{
+    position: relative;
+}
+
+
 .headline:after
 {
     content:' ';
@@ -84,106 +142,251 @@
     box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
     transform:translateX(-50%);}
 
+/*
+* === MAP TEXT ===
+*/
 
-.timerBlock{
-    background-color: #00000085;
-    width: 100%;
+.beforeMap{
     position: absolute;
-    bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    line-height: 2;
-    /*padding-top: 1000px;*/
+    left: 7%;
+    top: 5%;
+    background: #2a221f;
+    padding: 30px;
 }
-.names {
-    text-align: center;
-    width: 100%;
-    font-family: "DejaVu Serif";
-    font-size: 30px;
-    color: white;
+
+/*
+* === MOBILE ===
+*/
+
+@media (max-width: 768px) {
+    #logo{
+        display: none;
+    }
+    .header {
+        margin: -2% -15% -23% -11%;
+        width: 189%;
+    }
+
+    .acceptButtons{
+        margin-bottom: 20px;
+    }
+
+
 }
-.weddingDate {
-    text-align: center;
-    width: 100%;
-    font-family: "DejaVu Serif";
-    font-size: 40px;
-    color: white;
+@media (min-width: 320px) {
+    .beforeMap{
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        background: #2a221f;
+        padding: 5px;
+        font-size: 12px;
+    }
+    #invitation{
+        background-color: #4e4038;
+    }
+    #dressCodeImage1{
+        display: none;
+    }
+    #dressCodeImage2{
+        display: block;
+    }
+    #rings{
+        display: none;
+    }
+    .blockText{
+        bottom: 0px;
+        left: -439px;
+    }
+    .hashtag{
+        font-size: 21px;
+    }
+    .datePlace{font-size: 14px}
+    .timer{font-size: 14px}
+    .circle{
+        width: 50px;
+        height: 50px;
+    }
+    .Countdown-col-element{
+        margin: 0 15px;
+    }
 }
-.beforeWedding{
-    font-family: "DejaVu Serif";
-    color: white;
-    text-align: center;
-    width: 100%;
-    font-size: 35px;
+@media (min-width: 375px) {
+    .beforeMap{
+        position: absolute;
+        left: 11%;
+        top: 3%;
+        background: #2a221f;
+        padding: 5px;
+        font-size: 13px;
+    }
+    .blockText{
+        bottom: 0px;
+        left: -408px;
+    }
+    .hashtag{
+        font-size: 21px;
+    }
+    .datePlace{font-size: 16px}
+    .timer{font-size: 20px}
+    .circle{
+        width: 55px;
+        height: 55px;
+    }
+    .Countdown-col-element{
+        margin: 0 15px;
+    }
+
 }
-.timer{
-    font-family: "DejaVu Serif";
-    color: white;
-    text-align: center;
-    width: 100%;
-    font-size: 35px;
+@media (min-width: 414px) {
+    .beforeMap{
+        position: absolute;
+        left: 13%;
+        top: 3%;
+        background: #2a221f;
+        padding: 5px;
+        font-size: 13px;
+    }
+    .blockText{
+        bottom: 0px;
+        left: -392px;
+    }
+    .hashtag{
+        font-size: 24px;
+    }
+    .datePlace{font-size: 18px}
+    .timer{font-size: 22px}
+    .circle{
+        width: 60px;
+        height: 60px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
 }
-@media (min-width: 576px){
-    .timerBlock {
-        /*border-style: solid;*/
-        /*border-width: 2px;*/
-        /*border-color: white;*/
-        padding-right: 50px;
-        padding-left: 50px;
-        height: 100%;
-        /*width: 430px;*/
+@media (max-width: 414px) {
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
+    .timerBlock{
+        padding-top: 1000px;
+    }
+}
+@media (min-width: 768px) {
+    .beforeMap {
+        position: absolute;
+        left: 8%;
+        top: 3%;
+        background: #2a221f;
+        padding: 10px;
+        font-size: 20px;
+    }
+    #dressCodeImage2{
+        display: inline-block;
+    }
+    .blockText{
+        bottom: 130px;
+        left: -221px;
+    }
+    .hashtag{
+        font-size: 35px;
+    }
+    .datePlace{font-size: 30px}
+    .timer{font-size: 40px}
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+}
+@media (min-width: 1024px) {
+    #rings{
+        display: block;
+    }
+    #dressCodeImage1{
+        display: block;
+        background-color: #392317!important;
+    }
+    #dressCodeImage2{
+        display: none;
+    }
+
+    #programImage{
+        width: 142%;
+    }
+    .blockText{
+        bottom: 33px;
+        left: -80px;
+    }
+    .hashtag{
+        font-size: 50px;
+    }
+    .datePlace{font-size: 40px}
+    .timer{font-size: 50px}
+    .circle{
+        width: 125px;
+        height: 125px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    .header {
+        margin: 2% -15% -32% -5%;
+        width: 166%;
+    }
+}
+@media (min-width: 1920px) {
+    #invitation{
+        background-image: url("../assets/invite4.jpg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+    #programImage{
+        width: 100%;
+    }
+    .blockText{
+        bottom: 196px;
+        left: -76px;
+    }
+    .hashtag{
+        font-size: 35px;
+    }
+    .datePlace{font-size: 35px}
+    .timer{font-size: 35px}
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    .header {
+        margin: 2% -15% -37% -1%;
+        width: 125%;
     }
 }
 
-.countdown-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+@media (min-width: 769px) {
+
 }
 
-.countdown-item {
-    color: #111;
-    font-size: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    line-height: 30px;
-    margin: 10px;
-    padding-top: 10px;
-    position: relative;
-    width: 100px;
-    height: 100px;
+@media (min-width: 576px){
+    .timerBlock {
+
+        padding-right: 50px;
+        padding-left: 50px;
+        height: 100%;
+
+    }
 }
 
-.countdown-item span {
-    color: #333;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
 
-.countdown-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-}
 
-.answer{
-    background-color: #4e4038;
-    border: 1px solid black;
-    padding: 20px;
-    color: beige;
-}
-.acceptButton{
-    background: #2a221f!important;
-    border-color: #2a221f!important;
-}
+
 
 
 

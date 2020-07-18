@@ -7,9 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /*padding-top: 56px;*/
   background-color: #f3f3f3!important;
+  scroll-padding-top: 60px; /* height of sticky header */
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+body {
+}
+
+/* Ultimately, this is the correct place for scroll-padding */
+html {
+  scroll-padding-top: 60px; /* height of sticky header */
 }
