@@ -56,7 +56,8 @@
     "react-time-picker": "^4.0.1",
     "react-yandex-maps": "^4.4.0",
     "typescript": "^3.9.3",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "woke-dyno": "0.0.4"
   },
   "scripts": {
     "start": "node server.js",
