@@ -114,11 +114,12 @@ export let  translation = new LocalizedStrings({
         newInvitation:"Создать новое приглашение",
         namesOfInvitees:"Имена приглашенных",
         table:{
-            names:"Имена",
+            firstName:"Имя",
+            lastName:"Фамилия",
             status:"Статус",
             transfer:"Трансфер",
-            link:"Ссылка",
-            delete:"Удалить"
+            delete:"Удалить",
+            whoComingWithMe:"Кто придет со мной"
         },
         beforeWedding:"До свадьбы осталось:",
         accepted:"Дано согласие",

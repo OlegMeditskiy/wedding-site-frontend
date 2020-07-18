@@ -3,28 +3,9 @@ import {Button, Col, Form, Modal, Nav, Navbar, Row, Tab} from "react-bootstrap";
 import addNotification from 'react-push-notification';
 import '../Notidication.css';
 import './AdminPage.css';
-import Header from "./parts/Header";
-import WeddingDate from "./parts/WeddingDate";
-import AboutUs from "./parts/AboutUs";
-import OurStory from "./parts/OurStory";
-import Program from "./parts/Program";
-import DressCode from "./parts/DressCode";
-import Place from "./parts/Place";
 import Invitations from "./parts/Invitations";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {
-    faCalendarDay,
-    faClipboardList,
-    faEnvelopeOpenText,
-    faHeading,
-    faHome,
-    faLifeRing,
-    faMapMarkerAlt,
-    faScroll,
-    faSignOutAlt,
-    faTshirt,
-    faUserFriends
-} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelopeOpenText, faHome, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {translation} from "../constants";
 
 
@@ -118,16 +99,8 @@ constructor(props) {
                                     <Nav className="mr-auto flex-column ">
                                         <Navbar.Brand href="/admin">{translation.adminPanel}</Navbar.Brand>
                                         <Nav.Link eventKey={'home'} href={"/"}><FontAwesomeIcon icon={faHome} className={"icon"} />{translation.homePage}</Nav.Link>
-                                        {/*<Nav.Link eventKey={'header'} onClick={event=>this.handleSelect(event,'header')}><FontAwesomeIcon icon={faHeading} className={"icon"}/>{translation.header}</Nav.Link>*/}
-                                        <Nav.Link eventKey={'weddingDate'} onClick={event=>this.handleSelect(event,'weddingDate')}><FontAwesomeIcon icon={faCalendarDay} className={"icon"}/>{translation.weddingDate}</Nav.Link>
-                                        <Nav.Link eventKey={'aboutUs'} onClick={event=>this.handleSelect(event,'aboutUs')}><FontAwesomeIcon icon={faUserFriends} className={"icon"}/>{translation.aboutUs}</Nav.Link>
-                                        <Nav.Link eventKey={'ourStory'} onClick={event=>this.handleSelect(event,'ourStory')}><FontAwesomeIcon icon={faScroll} className={"icon"}/>{translation.ourStory}</Nav.Link>
-                                        <Nav.Link eventKey={'program'} onClick={event=>this.handleSelect(event,'program')}><FontAwesomeIcon icon={faClipboardList} className={"icon"}/>{translation.program}</Nav.Link>
-                                        <Nav.Link eventKey={'dressCode'} onClick={event=>this.handleSelect(event,'dressCode')}><FontAwesomeIcon icon={faTshirt} className={"icon"}/>{translation.dressCode}</Nav.Link>
-                                        <Nav.Link eventKey={'place'} onClick={event=>this.handleSelect(event,'place')}><FontAwesomeIcon icon={faMapMarkerAlt} className={"icon"}/>{translation.place}</Nav.Link>
                                         <Nav.Link eventKey={'invitation'} onClick={event=>this.handleSelect(event,'invitation')}><FontAwesomeIcon icon={faEnvelopeOpenText} className={"icon"}/>{translation.invitations}</Nav.Link>
                                         <hr/>
-                                        <Nav.Link onClick={this.handleShow}><FontAwesomeIcon icon={faLifeRing} className={"icon"}/>{translation.support}</Nav.Link>
                                         <Nav.Link onClick={this.props.handleLogout}><FontAwesomeIcon icon={faSignOutAlt} className={"icon"}/>{translation.exit}</Nav.Link>
                                     </Nav>
 
@@ -136,27 +109,6 @@ constructor(props) {
                         </Col>
                         <Col className={"tabContent"}>
                             <Tab.Content>
-                                {/*<Tab.Pane eventKey="header">*/}
-                                {/*    <Header/>*/}
-                                {/*</Tab.Pane>*/}
-                                <Tab.Pane eventKey="weddingDate">
-                                    <WeddingDate language={this.props.language} failNotification={this.updateFail} successNotification={this.updateSuccess} />
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="aboutUs">
-                                    <AboutUs failNotification={this.updateFail} successNotification={this.updateSuccess}/>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="ourStory">
-                                    <OurStory failNotification={this.updateFail} successNotification={this.updateSuccess}/>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="program">
-                                    <Program {...this.props} failNotification={this.updateFail} successNotification={this.updateSuccess}/>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="dressCode">
-                                    <DressCode failNotification={this.updateFail} successNotification={this.updateSuccess}/>
-                                </Tab.Pane>
-                                <Tab.Pane eventKey="place">
-                                    <Place failNotification={this.updateFail} successNotification={this.updateSuccess}/>
-                                </Tab.Pane>
                                 <Tab.Pane eventKey="invitation">
                                     <Invitations failNotification={this.updateFail} successNotification={this.updateSuccess}/>
                                 </Tab.Pane>

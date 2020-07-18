@@ -7,17 +7,13 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCopy} from "@fortawesome/free-solid-svg-icons";
 import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory from 'react-bootstrap-table2-editor';
-import {updatePersonalInvitation} from "../../util/SaveAPI";
 import {deletePersonalInvitation} from "../../util/DeleteAPI";
 import {translation} from "../../constants";
-import InvitationText from "./InvitationText";
 
 
 const Invitations=(props)=>{
 
     const [invitations,setInvitations]=useState([])
-
-    const [names,setNames]=useState('')
 
 
 
@@ -28,31 +24,6 @@ const Invitations=(props)=>{
                 setInvitations(response)
             }).catch(() => {
         });
-    }
-    const createInvitation=(event)=>{
-        event.preventDefault();
-        const createRequest={
-            names:names
-        }
-        createPersonalInvitation(createRequest)
-            .then((response) => {
-                props.successNotification(response[translation.numberOfResponse-1].message)
-                getInvitations();
-            }).catch(() => {
-
-        });
-
-    }
-    const returnNewProgramsPartForm=()=>{
-        return(
-            <Form onSubmit={(event)=>createInvitation(event)}>
-                <Form.Group>
-                    <Form.Label>{translation.namesOfInvitees}</Form.Label>
-                    <Form.Control onChange={(e)=>setNames(e.target.value)} type={"text"} name={"names"}/>
-                </Form.Group>
-                <Button type={"submit"}>{translation.newInvitation}</Button>
-            </Form>
-        )
     }
 
     useEffect(() => {
@@ -95,22 +66,20 @@ const Invitations=(props)=>{
             </Form>
         </div>)
     }
-    function linkFormatter(cell, row) {
-        return (
-            <div>
-                {/*<a href={cell}>Ссылка</a>*/}
-                <CopyToClipboard text={cell}>
-                    <Button>
-                        <FontAwesomeIcon icon={faCopy}/>
-                    </Button>
-                </CopyToClipboard></div>
-        )
-
-    }
     const columns = [
         {
-            dataField: 'names',
-            text: translation.table.names,
+            dataField: 'firstName',
+            text: translation.table.firstName,
+
+        },
+        {
+            dataField: 'lastName',
+            text: translation.table.lastName,
+
+        },
+        {
+            dataField: 'whoComingWithMe',
+            text: translation.table.whoComingWithMe,
 
         },
         {
@@ -126,18 +95,9 @@ const Invitations=(props)=>{
             editable:false
         },
         {
-            dataField: 'invitationLink',
-            text: translation.table.link,
-            formatter:linkFormatter,
-            style:{"wordWrap": "break-word"},
-            editable:false
-        },
-        {
             dataField: 'id',
             text: translation.table.delete,
             formatter:deleteFormatter,
-            // formatter:linkFormatter,
-            // style:{"wordWrap": "break-word"},
             editable:false
         },
 
@@ -149,19 +109,7 @@ const Invitations=(props)=>{
                 data={invitations}
                 columns={ columns }
                 cellEdit={cellEditFactory({
-                    mode: 'click',
-                    beforeSaveCell: (oldValue, newValue, row, column) => {
-                        const request={
-                            ...row,
-                            names:newValue
-                        }
-                        updatePersonalInvitation(request)
-                            .then(() => {
-                                getInvitations()
-                            })
-                            .catch((error) => {
-                            })
-                    }
+                    mode: 'click'
                 })}
             />
         )
@@ -169,10 +117,7 @@ const Invitations=(props)=>{
 
     return(
         <div className={"adminSiteBlock"}>
-                <h1>{translation.invitationText}</h1>
-                <InvitationText/>
                 <h1>{translation.invitations}</h1>
-                {returnNewProgramsPartForm()}
                 {invitationsTable()}
         </div>
     )

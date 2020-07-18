@@ -6,25 +6,14 @@ import 'moment/locale/ru';
 import {translation} from "../../constants";
 
 const Invitation =(props)=>{
-    // const [invitationText,setInvitationText]=useState('')
-    // const [date,setDate]=useState('')
-    // const getInvitationTextFromAPI=(signal)=>{
-    //     let promise = getInvitationText(signal)
-    //     promise
-    //         .then(response => {
-    //             setDate(new Date(response.finalDate))
-    //             setInvitationText(response.invitationText)
-    //         }).catch(() => {
-    //     });
-    // }
-    // useEffect(()=>{
-    //     const abortController = new AbortController()
-    //     const signal = abortController.signal
-    //     getInvitationTextFromAPI(signal);
-    //     return function cleanup() {
-    //         abortController.abort()
-    //     }
-    // },[])
+
+    const [firstName,setFirstName]=useState('')
+    const [lastName,setLastName]=useState('')
+    const [email,setEmail]=useState('')
+    const [coming,setComing]=useState(false)
+    const [needTransfer,setNeedTransfer]=useState(false)
+
+
     const handleSubmit=(event)=>{
         event.preventDefault();
         console.log("handleSubmit")
@@ -38,20 +27,20 @@ const Invitation =(props)=>{
                             <p className={"text-center site-text"}>Пожалуйста, заполните информацию о себе!</p>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group>
-                                    <Form.Check inline label="Приду" type={"radio"} id={`inline-radio-1`} />
+                                    <Form.Check inline checked={coming} label="Приду" type={"radio"} id={`inline-radio-1`} />
                                     <Form.Check inline label="Не приду" type={"radio"} id={`inline-radio-2`} />
                                 </Form.Group>
                                 <Form.Group controlId="name">
                                     <Form.Label>Имя<sup>*</sup></Form.Label>
-                                    <Form.Control required type="text"/>
+                                    <Form.Control onChange={event => setFirstName(event.target.value)} required type="text"/>
                                 </Form.Group>
                                 <Form.Group controlId="lastname">
                                     <Form.Label>Фамилия<sup>*</sup></Form.Label>
-                                    <Form.Control required type="text"/>
+                                    <Form.Control onChange={event => setLastName(event.target.value)} required type="text"/>
                                 </Form.Group>
                                 <Form.Group controlId="email">
                                     <Form.Label>Email<sup>*</sup></Form.Label>
-                                    <Form.Control required type="email"/>
+                                    <Form.Control onChange={event => setEmail(event.target.value)} required type="email"/>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Для вашего удобства будет организован трансфер от метро .. время отправления ...</Form.Label>

@@ -15,12 +15,3 @@ export function createPersonalInvitation(createRequest) {
         body: JSON.stringify(createRequest)
     });
 }
-export function createProgramsPart(createProgramsPartRequest) {
-    console.log(createProgramsPartRequest)
-    return request({
-        url: API_BASE_URL + "/admin/create/programsPart",
-        method: 'POST',
-        body: JSON.stringify(createProgramsPartRequest)
-    });
-}
-
