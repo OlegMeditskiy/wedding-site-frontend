@@ -4,16 +4,16 @@ import {translation} from "../../constants";
 
 const Navigation = () =>{
     return(
-        <Navbar className={"whiteNavbar"} expand="lg" fixed={"top"}>
+        <Navbar bg={"light"} expand="lg" fixed={"top"}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="justify-content-center w-100">
-                    <Nav.Link href="#aboutUs">{translation.menu.aboutUs}</Nav.Link>
+                    <Nav.Link  href="#aboutUs">{translation.menu.aboutUs}</Nav.Link>
                     <Nav.Link href="#ourStory">{translation.menu.ourStory}</Nav.Link>
                     <Nav.Link href="#program">{translation.menu.program}</Nav.Link>
                     <Nav.Link href="#dressCode">{translation.menu.dressCode}</Nav.Link>
-                    <Nav.Link href="#place">{translation.menu.place}</Nav.Link>
                     <Nav.Link href="#invitation">{translation.menu.invitation}</Nav.Link>
+                    {/*<Nav.Link href="#place">{translation.menu.place}</Nav.Link>*/}
                 </Nav>
 
             </Navbar.Collapse>

@@ -19,8 +19,8 @@ const MainPage = (props) => {
             <OurStory/>
             <Program/>
             <DressCode/>
-            <Place/>
             <Invitation/>
+            <Place/>
         </div>
     )
 }
