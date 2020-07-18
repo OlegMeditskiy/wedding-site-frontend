@@ -10,7 +10,7 @@ export function sendMailToSupport(sendMailToSupportRequest) {
 }
 export function createPersonalInvitation(createRequest) {
     return request({
-        url: API_BASE_URL + "/admin/create/personalInvitation",
+        url: API_BASE_URL + "/create/invitation",
         method: 'POST',
         body: JSON.stringify(createRequest)
     });
