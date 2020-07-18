@@ -51,14 +51,14 @@ const Invitation =(props)=>{
                 <p>Eсли Вы придете одни, то оставьте поле пустым.</p>
                 <textarea style={{"width": "100%","height": "100px"}} value={whoComingWithMe} onChange={event=>setWhoComingWithMe(event.target.value)}></textarea>
             </Modal.Body>
-            {/*<Modal.Footer>*/}
-            {/*    /!*<Button variant="secondary" onClick={handleClose}>*!/*/}
-            {/*    /!*    Закрыть*!/*/}
-            {/*    /!*</Button>*!/*/}
-            {/*    <Button variant="primary" onClick={handleClose}>*/}
-            {/*        Сохранить*/}
-            {/*    </Button>*/}
-            {/*</Modal.Footer>*/}
+            <Modal.Footer>
+                {/*<Button variant="secondary" onClick={handleClose}>*/}
+                {/*    Закрыть*/}
+                {/*</Button>*/}
+                <Button variant="primary" onClick={handleClose}>
+                    ОК
+                </Button>
+            </Modal.Footer>
         </Modal>
     }
 
@@ -87,7 +87,7 @@ const Invitation =(props)=>{
                                             label="Приду"
                                             name="formHorizontalRadios"
                                             id="formHorizontalRadios1"
-                                            // onChange={event=>handleComingBox(event)}
+                                            onChange={event=>handleComingBox(event)}
                                             value={true}
                                             feedback="You must agree before submitting."
                                         />
