@@ -338,13 +338,16 @@
         width: 166%;
     }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
     #invitation{
         background-image: url("../assets/invite4.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center top;
     }
+}
+@media (min-width: 1920px) {
+
     #programImage{
         width: 100%;
     }
