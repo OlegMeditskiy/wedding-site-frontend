@@ -53,18 +53,15 @@ const Program =(props)=>{
     return(
         <div style={{"padding":"0px"}} id={"program"} className={"mainPageBlock evenBlock"}>
             <Row>
-                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} lg={6} xl={6}>
-                    <Image id={"programImage"}  src={program}/>
-                </Col>
                 <Col lg={6} xl={6}>
                     <h1  style={{"marginBottom":"50px","marginTop":"30px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
 
                     <h3 className={"text-center"}>29 августа</h3>
                     <div className={"site-text"}>
                         <div className={"text-center"}>
-                        {/*<Image style={{"height":"50px"}} src={guests}></Image>*/}
-                        <p>15:00 - Сбор гостей</p>
-                    </div>
+                            {/*<Image style={{"height":"50px"}} src={guests}></Image>*/}
+                            <p>15:00 - Сбор гостей</p>
+                        </div>
                         <div className={"text-center"}>
                             {/*<Image style={{"height":"50px"}} src={starters}></Image>*/}
                             <p>Приветственный фуршет</p>
@@ -82,7 +79,9 @@ const Program =(props)=>{
                             <p>Веселье и танцы до упаду</p>
                         </div></div>
                 </Col>
-
+                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} lg={6} xl={6}>
+                    <Image id={"programImage"}  src={program}/>
+                </Col>
             </Row>
 
 
