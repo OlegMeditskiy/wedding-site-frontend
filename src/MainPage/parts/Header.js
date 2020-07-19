@@ -16,7 +16,7 @@ const Header =(props)=>{
                 <Col >
                     {/*<Image id={"headerImage"}*/}
                     {/*       src={headerIMG} alt={"header image"}/>*/}
-                    <Image id={"aboutUsImage"} src={ourStory}/>
+                    <Image id={"aboutUsImage"} src={headerIMG}/>
                     {/*<div className={"timerBlock"}>*/}
                     {/*    <div className={"blockText"}>*/}
                     {/*        <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>*/}
