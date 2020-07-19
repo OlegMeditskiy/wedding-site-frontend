@@ -280,7 +280,7 @@
         width: 190%;
     }
     .timerBlock{
-        padding-top: 1000px;
+        /*padding-top: 1000px;*/
     }
 }
 @media (min-width: 768px) {
@@ -362,8 +362,12 @@
 }
 @media (min-width: 1920px) {
     #aboutUsImage{
-        margin: -10% 0% 0% -19%;
-        width: 119%;
+        margin: 0% 0% 0% 0%;
+        width: 124%;
+    }
+    #aboutUsImage2{
+        margin: 0% 0% 0% 0%;
+        width: 124%;
     }
     #invitation{
         color: white;
