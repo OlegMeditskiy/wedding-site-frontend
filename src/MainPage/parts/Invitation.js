@@ -142,7 +142,7 @@ const Invitation =(props)=>{
                                         />
 
                                     </Form.Group>
-                                <Button style={{"background-color":"#4e4038","border-color":"#4e4038"}} variant="primary" type="submit">
+                                <Button id={"acceptButton"} variant="primary" type="submit">
                                     Отправить
                                 </Button>
                             </Form>

@@ -47,16 +47,20 @@ const Invitations=(props)=>{
         return <Form.Check readOnly checked={cell}/>
     }
     function statusFormatter(cell, row) {
-        if (cell=="NOT_ANSWERED"){
-            return translation.not_answered
-        }
-        else if(cell=="ACCEPTED"){
+       if(cell===true){
             return translation.accepted
         }
         else {
             return translation.declined
         }
-
+    }
+    function transferFormatter(cell, row) {
+        if(cell===true){
+            return translation.needTransfer
+        }
+        else {
+            return translation.dontNeedTransfer
+        }
     }
 
     function deleteFormatter(cell, row) {
@@ -70,20 +74,20 @@ const Invitations=(props)=>{
         {
             dataField: 'firstName',
             text: translation.table.firstName,
-
+            editable:false
         },
         {
             dataField: 'lastName',
             text: translation.table.lastName,
-
+            editable:false
         },
         {
             dataField: 'whoComingWithMe',
             text: translation.table.whoComingWithMe,
-
+            editable:false
         },
         {
-            dataField: 'status',
+            dataField: 'coming',
             text: translation.table.status,
             formatter: statusFormatter,
             editable:false
@@ -91,7 +95,7 @@ const Invitations=(props)=>{
         {
             dataField: 'needTransfer',
             text: translation.table.transfer,
-            formatter: checkBoxFormatter,
+            formatter: transferFormatter,
             editable:false
         },
         {

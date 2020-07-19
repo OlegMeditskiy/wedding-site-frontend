@@ -11,14 +11,12 @@ import AdminPage from "../Admin/AdminPage";
 import addNotification, {Notifications} from 'react-push-notification';
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
 import MainPage from "../MainPage/MainPage";
+import Admin from "../Admin/Admin";
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentUser: null,
-            isAuthenticated: null,
-            isLoading: false,
             language: 'ru',
             successMessage: {
                 title: 'Успешно!',
@@ -27,9 +25,9 @@ class App extends Component {
                 duration: '4500',
             },
         }
-        this.handleLogout = this.handleLogout.bind(this);
-        this.loadCurrentUser = this.loadCurrentUser.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
+        // this.handleLogout = this.handleLogout.bind(this);
+        // this.loadCurrentUser = this.loadCurrentUser.bind(this);
+        // this.handleLogin = this.handleLogin.bind(this);
         this._onSetLanguageToEnglish=this._onSetLanguageToEnglish.bind(this);
         this._onSetLanguageToRussian=this._onSetLanguageToRussian.bind(this);
         this._onSetLanguageToSwedish=this._onSetLanguageToSwedish.bind(this);
@@ -63,70 +61,29 @@ class App extends Component {
 
     }
 
-    loadCurrentUser() {
-        this.setState({
-            isLoading: true
-        });
-        getCurrentUser()
-            .then(response => {
-                this.setState({
-                    currentUser: response,
-                    isAuthenticated: true,
-                    isLoading: false
-                });
-            }).catch(() => {
-            this.setState({
-                isLoading: false,
-                isAuthenticated: false,
-            });
-        });
 
-    }
 
     componentDidMount() {
         this.loadLanguage();
         // this.loadCurrentUser();
     }
 
-    handleLogout() {
-        localStorage.removeItem(ACCESS_TOKEN);
-        this.setState({
-            currentUser: null,
-            isAuthenticated: false
-        });
-        addNotification({
-            message: 'Вы вышли из аккаунта',
-            ...this.state.successMessage
-        });
-        this.props.history.push("/login");
-    }
 
-
-    handleLogin() {
-        this.loadCurrentUser();
-        addNotification({
-            message: 'Вы успешно авторизовались',
-            ...this.state.successMessage
-        });
-        this.props.history.push("/admin");
-    }
 
     render() {
         translation.setLanguage(this.state.language);
-        if (this.state.isLoading) {
-            return <LoadingIndicator/>
-        }
+
         return (
                 <div className="app-container">
                     <div className="app-content">
                         <Notifications position={"top-right"}/>
                             <Switch>
-                                <Route path="/login"
-                                       render={(props) => <Login onLogin={this.handleLogin} {...props} />}/>
+
                                        <Route exact path="/"
                                               render={(props) => <MainPage />}/>
-                                {(this.state.isAuthenticated!==null)?<PrivateRoute authenticated={this.state.isAuthenticated} path="/admin" handleLogout={this.handleLogout}
-                                                                                   currentUser={this.state.currentUser} language={this.state.language}  component={AdminPage} />:null}
+                                <Route path="/admin"
+                                       render={(props) => <Admin {...this.props}/>}/>
+
                                 <Route component={NotFound}/>
                             </Switch>
                     </div>

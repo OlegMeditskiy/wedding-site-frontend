@@ -29,7 +29,7 @@ constructor(props) {
             closeButton: 'X',
             duration: '1500'
         },
-        key:'header'
+        key:'invitation'
     }
     this.updateFail=this.updateFail.bind(this);
     this.updateSuccess=this.updateSuccess.bind(this);
@@ -92,7 +92,7 @@ constructor(props) {
             <div className={"adminPageMainDiv"}>
                 <Tab.Container id="left-tabs-example" activeKey={this.state.key} defaultActiveKey={this.state.key}>
                     <Row className={"adminPageRow"}>
-                        <Col md={"auto"} sm={12}>
+                        <Col style={{"paddingLeft":"0px","paddingRight":"0px"}} md={"auto"} sm={12}>
                             <Navbar bg="dark" variant="dark" expand={"lg"} className={"adminMenuNavbar"}>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
