@@ -22,6 +22,8 @@
     "flatpickr": "^4.6.3",
     "google-maps-react": "^2.0.6",
     "html-react-parser": "^0.10.5",
+    "hyphenated": "^1.2.0",
+    "hyphenated-ru": "^1.2.0",
     "jquery": "^3.5.1",
     "less": "^3.11.1",
     "lvovich": "^1.0.16",
@@ -46,6 +48,7 @@
     "react-flag-icon-css": "^1.0.25",
     "react-flatpickr": "^3.10.1",
     "react-hook-form": "^5.7.2",
+    "react-hyphen": "^1.4.0",
     "react-iframe": "^1.8.0",
     "react-localization": "^1.0.15",
     "react-moment": "^0.9.7",
@@ -60,7 +63,7 @@
     "woke-dyno": "0.0.4"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
