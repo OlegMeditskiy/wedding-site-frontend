@@ -34,21 +34,24 @@ const OurStory =(props)=>{
         <div id={"ourStory"} style={{"padding": "0"}} className={"mainPageBlock"}>
             <div className={"evenBlock"} style={{"paddingTop":"30px"}}>
                 <h1 className={"title text-center"}><span className={"headline"}>{translation.menu.ourStory}</span></h1>
-                <div style={{"padding":"35px 0px"}}>
-                    <p style={{"line-height":"2"}} className={"text-center"}>Всем привет!
-                        <br/>Мы очень рады пригласить вас отметить с нами день нашей свадьбы.
-                        <br/>Хотели бы вас немного познакомить с историей зарождения нашей пары.  История знакомства от невесты, история предложения руки и сердца- от жениха.
-                        <br/>Надеемся, вам понравится и вы с удовольствием впишите себя в нашу общую историю зарождения нашей семьи.</p>
+                <div className={"text-center"} style={{"padding":"30px 10px"}}>
+                    <p style={{"line-height":"2"}} >Всем привет!</p>
+                        <p>                        Мы очень рады пригласить вас отметить с нами день нашей свадьбы.
+                        </p>
+                        <p>                        Хотели бы вас немного познакомить с историей зарождения нашей пары.  История знакомства от невесты, история предложения руки и сердца- от жениха.
+                        </p>
+                        <p>                        Надеемся, вам понравится и вы с удовольствием впишите себя в нашу общую историю зарождения нашей семьи.
+                </p>
                 </div>
             </div>
 
 
                 <Row>
-                    <Col style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={6}>
-                        <Image id={"aboutUsImage"} src={ourStory}/>
+                    <Col id={"aboutUsImage"} style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={6}>
+                        <Image  className={"aboutUsImage"} src={ourStory}/>
                     </Col>
-                    <Col className={"odBlock"} style={{"padding":"30px 10px 0px 30px"}} md={6}>
-                        <h2 style={{"paddingLeft": "20px"}} className={"text-left"}>История нашего знакомства</h2>
+                    <Col className={"odBlock"} style={{"padding":"30px 20px 30px 20px"}} md={6}>
+                        <h2 style={{"paddingLeft": "20px"}} id={"story1"}>История нашего знакомства</h2>
                         <div style={{"text-indent": "20px"}}>
                             <Hyphenated language={ru}>
                             <p>Начну с того, что мы с Сашей познакомились зимой. Счастливая после праздников и вымотанная после сессии я начинаю свой заслуженный отдых.</p>
@@ -66,8 +69,11 @@ const OurStory =(props)=>{
                     </Col>
                 </Row>
             <Row>
-                <Col md={6}>
-                <h2 style={{"paddingLeft": "20px"}} className={"text-right"}>История предложения руки и сердца</h2>
+                <Col id={"aboutUsImage1"} style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={6}>
+                    <Image  className={"aboutUsImage"} src={ourStory2}/>
+                </Col>
+                <Col style={{"padding":"30px 20px 30px 20px"}} md={6}>
+                <h2 style={{"paddingRight": "20px"}} id={"story2"} >История предложения руки и сердца</h2>
                 <div style={{"text-indent": "20px"}}>
                     <Hyphenated language={ru}>
                     <p>Казалось бы, совсем недавно я был совсем маленьким и жил беззаботно... И вот взрослая жизнь настигла и меня. Настало время серьезных решений и принятия ответственности на себя.</p>
@@ -82,8 +88,8 @@ const OurStory =(props)=>{
 
 
             </Col>
-                <Col style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={6}>
-                    <Image id={"aboutUsImage2"} src={ourStory2}/>
+                <Col id={"aboutUsImage2"} style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={6}>
+                    <Image  className={"aboutUsImage"} src={ourStory2}/>
                 </Col>
             </Row>
 

@@ -21,7 +21,7 @@
 
 .timerBlock{
     height: 100%;
-    background-color: rgba(255, 0, 0, 0.52);
+    background-color: #00000085;
     width: 100%;
     position: absolute;
     bottom: 0px;
@@ -160,30 +160,38 @@
 * === MOBILE ===
 */
 
-/*@media (max-width: 768px) {*/
-/*    #logo{*/
-/*        display: none;*/
-/*    }*/
-/*    .header {*/
-/*        margin: -2% -15% -23% -11%;*/
-/*        width: 189%;*/
-/*    }*/
-
-/*    .acceptButtons{*/
-/*        margin-bottom: 20px;*/
-/*    }*/
-/*}*/
-@media (min-width: 320px) {
-    .header {
-        /*margin: 8% -15% -30% -12%;*/
-        width: 1300px;
-        height: auto;
+@media (max-width: 768px) {
+    #logo{
+        display: none;
     }
-    #aboutUsImage,#aboutUsImage2{
+    .header {
+        margin: -2% -15% -23% -11%;
+        width: 189%;
+    }
+
+    .acceptButtons{
+        margin-bottom: 20px;
+    }
+
+}
+@media (min-width: 320px) {
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
         margin: -10% 0% 0% -19%;
         width: 119%;
     }
-    h2{font-size: 18px!important;}
+    h2{font-size: 17px!important;}
     #acceptButton{
         background-color:#2a221f;
         border-color:#2a221f}
@@ -279,7 +287,10 @@
     }
 }
 @media (max-width: 414px) {
-
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
     .timerBlock{
         /*padding-top: 1000px;*/
     }
@@ -313,6 +324,18 @@
     }
 }
 @media (min-width: 1024px) {
+    #aboutUsImage1{
+        display: none;
+    }
+    #aboutUsImage2{
+        display: block;
+    }
+    #story1{
+        text-align: left;
+    }
+    #story2{
+        text-align: right;
+    }
     #rings{
         display: block;
     }
@@ -344,10 +367,10 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
-    /*.header {*/
-    /*    margin: 2% -15% -32% -5%;*/
-    /*    width: 166%;*/
-    /*}*/
+    .header {
+        margin: 2% -15% -32% -5%;
+        width: 166%;
+    }
 }
 @media (min-width: 1200px) {
     #invitation{
@@ -362,9 +385,9 @@
         border-color:#4e4038}
 }
 @media (min-width: 1920px) {
-    #aboutUsImage,#aboutUsImage2{
+    .aboutUsImage{
         margin: 0% 0% 0% 0%;
-        width: 124%;
+        width: 129%;
     }
 
     #invitation{
@@ -390,11 +413,15 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
-    /*.header {*/
-    /*    height: auto;*/
-    /*    margin: 2% -15% -37% -1%;*/
-    /*    width: 125%;*/
-    /*}*/
+    .header {
+        height: auto;
+        margin: 2% -15% -37% -1%;
+        width: 125%;
+    }
+}
+
+@media (min-width: 769px) {
+
 }
 
 @media (min-width: 576px){
