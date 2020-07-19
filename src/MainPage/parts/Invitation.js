@@ -70,7 +70,7 @@ const Invitation =(props)=>{
     }
 
     return(
-        <div id={"invitation"}  className={"mainPageBlock evenBlock chapter"}>
+        <div id={"invitation"}  className={"mainPageBlock chapter"}>
             {modal()}
                 <Row >
                     <Col xl={{span:4,offset:8}}>

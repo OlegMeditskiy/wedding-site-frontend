@@ -7,7 +7,7 @@ import starters from "../../assets/starters.png";
 import arch from "../../assets/arch.png";
 import cake from "../../assets/cake.png";
 import DJ from "../../assets/DJ.png";
-import program from "../../assets/program.jpeg";
+import program from "../../assets/program1.jpg";
 
 const Program =(props)=>{
     // const [program,setProgram]=useState(
@@ -51,7 +51,7 @@ const Program =(props)=>{
     // }
 
     return(
-        <div style={{"padding":"0px"}} id={"program"} className={"mainPageBlock odBlock"}>
+        <div style={{"padding":"0px"}} id={"program"} className={"mainPageBlock evenBlock"}>
             <Row>
                 <Col lg={6} xl={6}>
                     <h1  style={{"marginBottom":"50px","marginTop":"30px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>

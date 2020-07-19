@@ -106,12 +106,13 @@
 }
 
 .odBlock{
-    background-color: #4e4038 ;
-    color: beige;
+    /*background-color:#f3f3f3 ;*/
+    background-color: #efefef;
+    color: black;
 }
 .evenBlock{
-    background-color: #2a221f;
-    color: beige;
+    background-color: white;
+    color: black;
 }
 
 /*
@@ -137,7 +138,7 @@
     top:100%;
     left:50%;
     width: 100%;
-    border:1px solid #f5f5dc;
+    border:1px solid #000000;
     border-radius:4px;
     box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
     transform:translateX(-50%);}
@@ -174,6 +175,11 @@
 
 }
 @media (min-width: 320px) {
+    #aboutUsImage{
+        margin: -10% 0% 0% -19%;
+        width: 119%;
+    }
+    h2{font-size: 18px!important;}
     #acceptButton{
         background-color:#2a221f;
         border-color:#2a221f}
@@ -181,12 +187,14 @@
         position: absolute;
         left: 5%;
         top: 5%;
-        background: #2a221f;
+        background: black;
+        color: white;
         padding: 5px;
         font-size: 12px;
     }
     #invitation{
-        background-color: #4e4038;
+        background-color: white;
+        color: black;
     }
     #dressCodeImage1{
         display: none;
@@ -215,11 +223,11 @@
     }
 }
 @media (min-width: 375px) {
+
     .beforeMap{
         position: absolute;
         left: 11%;
         top: 3%;
-        background: #2a221f;
         padding: 5px;
         font-size: 13px;
     }
@@ -246,7 +254,6 @@
         position: absolute;
         left: 13%;
         top: 3%;
-        background: #2a221f;
         padding: 5px;
         font-size: 13px;
     }
@@ -281,7 +288,6 @@
         position: absolute;
         left: 8%;
         top: 3%;
-        background: #2a221f;
         padding: 10px;
         font-size: 20px;
     }
@@ -309,6 +315,7 @@
     #rings{
         display: block;
     }
+    h2{font-size: 2em!important;}
     #dressCodeImage1{
         display: block;
         background-color: #392317!important;
@@ -343,7 +350,7 @@
 }
 @media (min-width: 1200px) {
     #invitation{
-        background-image: url("../assets/invite4.jpg");
+        background-image: url("../assets/invite5.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center top;
@@ -354,7 +361,14 @@
         border-color:#4e4038}
 }
 @media (min-width: 1920px) {
+    #aboutUsImage{
+        margin: -10% 0% 0% -19%;
+        width: 119%;
+    }
+    #invitation{
+        color: white;
 
+    }
     #programImage{
         width: 100%;
     }
