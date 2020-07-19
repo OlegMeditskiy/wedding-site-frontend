@@ -1,10 +1,7 @@
 import React from "react";
-import {Col, Image, Row} from "react-bootstrap";
-import {translation} from "../../constants";
-import place from "../../assets/place.jpg";
-import {YMaps, Map, Placemark, ZoomControl} from "react-yandex-maps";
-import program from "../../assets/program.jpeg";
-import artiland from "../../assets/artiland.jpg"
+import {Col, Row} from "react-bootstrap";
+import {Map, Placemark, YMaps, ZoomControl} from "react-yandex-maps";
+
 const mapData = {
     center: [55.7937886,38.0485991],
     zoom: 5,
