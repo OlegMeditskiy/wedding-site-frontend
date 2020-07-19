@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Image} from "react-bootstrap";
+import {Col, Image, Row} from "react-bootstrap";
 import Moment from 'react-moment';
 import header from "../../assets/header3.jpg"
 import 'moment/locale/ru';
@@ -32,31 +32,36 @@ const Header =(props)=>{
     const currentDate = new Date();
     const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return(
-        <div id={"home"} style={{"overflow":"hidden","position":"relative"}}>
-                <Image className={"header"}
-                       src={header}/>
-                <div className={"timerBlock"}>
-                    <div className={"blockText"}>
-                        {/*<div className={"weddingDate"}>*/}
-                        {/*    29 августа 2020*/}
-                        {/*</div>*/}
-                        <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>
-                        {/*<div className={"inviteText"}>Приглашаем Вас разделить с нами этот волшебный праздник - нашу свадьбу.</div>*/}
+        <div id={"home"} style={{"position":"relative"}}>
+            <Row>
+                <Col style={{"overflow":"hidden"}}>
+                    <Image className={"header"}
+                           src={header}/>
+                    <div className={"timerBlock"}>
+                        <div className={"blockText"}>
+                            {/*<div className={"weddingDate"}>*/}
+                            {/*    29 августа 2020*/}
+                            {/*</div>*/}
+                            <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>
+                            {/*<div className={"inviteText"}>Приглашаем Вас разделить с нами этот волшебный праздник - нашу свадьбу.</div>*/}
 
 
-                        {/*<div className={"beforeWedding"}>{translation.beforeWedding}</div>*/}
-                        <div className={"timer"}>
-                            {/*<Countdown*/}
-                            {/*    date={Date.now() + 5000000}*/}
-                            {/*    renderer={renderer}*/}
-                            {/*>*/}
-                            {/*</Countdown>*/}
-                            <Countdown date={`${year}-08-29T15:00:00`} />
+                            {/*<div className={"beforeWedding"}>{translation.beforeWedding}</div>*/}
+                            <div className={"timer"}>
+                                {/*<Countdown*/}
+                                {/*    date={Date.now() + 5000000}*/}
+                                {/*    renderer={renderer}*/}
+                                {/*>*/}
+                                {/*</Countdown>*/}
+                                <Countdown date={`${year}-08-29T15:00:00`} />
+                            </div>
+                            <div className={"hashtag"}>#скажитеДАчувствам</div>
                         </div>
-                        <div className={"hashtag"}>#скажитеДАчувствам</div>
-                    </div>
 
-                </div>
+                    </div>
+                </Col>
+            </Row>
+
         </div>
     )
 }
