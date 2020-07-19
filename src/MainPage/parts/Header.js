@@ -32,7 +32,7 @@ const Header =(props)=>{
     const currentDate = new Date();
     const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return(
-        <div style={{"overflow":"hidden","position":"relative"}}>
+        <div id={"home"} style={{"overflow":"hidden","position":"relative"}}>
                 <Image className={"header"}
                        src={header}/>
                 <div className={"timerBlock"}>
