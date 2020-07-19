@@ -13,8 +13,8 @@ const Header =(props)=>{
         <div id={"home"} style={{"position":"relative"}}>
             <Row>
                 <Col style={{"overflow":"hidden"}}>
-                    <Image className={"header"}
-                           src={header}/>
+                    <Image id={"headerImage"}
+                           src={header} alt={"header image"}/>
                     {/*<div className={"timerBlock"}>*/}
                         <div className={"blockText"}>
                             <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>
