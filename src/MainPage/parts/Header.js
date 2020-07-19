@@ -15,7 +15,7 @@ const Header =(props)=>{
                 <Col style={{"overflow":"hidden"}}>
                     <Image className={"header"}
                            src={header}/>
-                    <div className={"timerBlock"}>
+                    {/*<div className={"timerBlock"}>*/}
                         <div className={"blockText"}>
                             <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>
                             <div className={"timer"}>
@@ -23,8 +23,7 @@ const Header =(props)=>{
                             </div>
                             <div className={"hashtag"}>#скажитеДАчувствам</div>
                         </div>
-
-                    </div>
+                    {/*</div>*/}
                 </Col>
             </Row>
 
