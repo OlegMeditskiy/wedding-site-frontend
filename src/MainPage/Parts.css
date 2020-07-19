@@ -160,21 +160,19 @@
 * === MOBILE ===
 */
 
-@media (max-width: 768px) {
-    #logo{
-        display: none;
-    }
-    .header {
-        margin: -2% -15% -23% -11%;
-        width: 189%;
-    }
+/*@media (max-width: 768px) {*/
+/*    #logo{*/
+/*        display: none;*/
+/*    }*/
+/*    .header {*/
+/*        margin: -2% -15% -23% -11%;*/
+/*        width: 189%;*/
+/*    }*/
 
-    .acceptButtons{
-        margin-bottom: 20px;
-    }
-
-
-}
+/*    .acceptButtons{*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+/*}*/
 @media (min-width: 320px) {
     #aboutUsImage,#aboutUsImage2{
         margin: -10% 0% 0% -19%;
@@ -279,6 +277,7 @@
     .header {
         margin: 8% -15% -30% -12%;
         width: 190%;
+        height: auto;
     }
     .timerBlock{
         /*padding-top: 1000px;*/
