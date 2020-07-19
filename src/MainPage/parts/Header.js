@@ -4,6 +4,7 @@ import headerIMG from "../../assets/header3.jpg"
 import 'moment/locale/ru';
 import 'moment/locale/sv';
 import Countdown from "./Countdown";
+import ourStory from "../../assets/ourStory1.jpg";
 const Header =(props)=>{
     const date = ""
 
@@ -13,8 +14,9 @@ const Header =(props)=>{
         <div id={"home"}>
             <Row>
                 <Col >
-                    <Image id={"headerImage"}
-                           src={headerIMG} alt={"header image"}/>
+                    {/*<Image id={"headerImage"}*/}
+                    {/*       src={headerIMG} alt={"header image"}/>*/}
+                    <Image id={"aboutUsImage"} src={ourStory}/>
                     {/*<div className={"timerBlock"}>*/}
                     {/*    <div className={"blockText"}>*/}
                     {/*        <div className={"datePlace"}>29 АВГУСТА, 15:00 | Загородный клуб «Artiland»</div>*/}
