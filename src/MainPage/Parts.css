@@ -16,7 +16,7 @@
 }
 
 /*
-* === HEADER ===
+* ===#headerImage ===
 */
 
 .timerBlock{
@@ -165,7 +165,7 @@
 /*    #logo{*/
 /*        display: none;*/
 /*    }*/
-/*    .header {*/
+/*    #headerImage {*/
 /*        margin: -2% -15% -23% -11%;*/
 /*        width: 189%;*/
 /*    }*/
@@ -175,7 +175,7 @@
 /*    }*/
 /*}*/
 @media (min-width: 320px) {
-    .header {
+    #headerImage {
         /*margin: 8% -15% -30% -12%;*/
         width: 1300px;
         height: auto;
@@ -345,7 +345,7 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
-    /*.header {*/
+    /*#headerImage {*/
     /*    margin: 2% -15% -32% -5%;*/
     /*    width: 166%;*/
     /*}*/
@@ -391,7 +391,7 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
-    /*.header {*/
+    /*#headerImage {*/
     /*    height: auto;*/
     /*    margin: 2% -15% -37% -1%;*/
     /*    width: 125%;*/
