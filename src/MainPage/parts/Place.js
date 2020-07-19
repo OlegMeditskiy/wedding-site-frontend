@@ -24,7 +24,7 @@ const Place =(props)=>{
                             <YMaps>
                                 <Map
                                     width={"100%"} height={"100%"}
-                                    defaultState={{ center: [55.79325945,38.04744019], zoom: 16 }}>
+                                    defaultState={{ center: [55.79325945,38.04944019], zoom: 16 }}>
                                     <ZoomControl options={{ float: 'right' }} />
                                     <Placemark defaultGeometry={[55.79325945,38.05144019]} />
                                 </Map>
