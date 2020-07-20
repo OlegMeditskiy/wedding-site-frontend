@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Button, Col, Form, Modal, Row} from "react-bootstrap";
-import {getInvitationText} from "../../util/GetAPI";
 import 'moment-timezone';
 import 'moment/locale/ru';
 import {translation} from "../../constants";
@@ -14,23 +13,35 @@ const Invitation =(props)=>{
     const [coming,setComing]=useState(false)
     const [needTransfer,setNeedTransfer]=useState(false)
     const [whoComingWithMe,setWhoComingWithMe]=useState('')
-
-
-
+    const [showForm,setShowForm]=useState(true)
+    const [accepted,setAccepted]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault();
-
-        const request = {
-            coming:coming,
-            firstName:firstName,
-            lastName:lastName,
-            email:email,
-            needTransfer:needTransfer,
-            whoComingWithMe:whoComingWithMe
+        let request;
+        if (coming){
+            request = {
+                coming:coming,
+                firstName:firstName,
+                lastName:lastName,
+                email:email,
+                needTransfer:needTransfer,
+                whoComingWithMe:whoComingWithMe
+            }
         }
+        else {
+            request = {
+                coming:coming,
+                firstName:firstName,
+                lastName:lastName,
+                email:email,
+                needTransfer:needTransfer,
+                whoComingWithMe:''
+            }
+        }
+
         createPersonalInvitation(request)
             .then(() => {
-                console.log("create")
+                setAccepted(true);
             })
             .catch((error) => {
 
@@ -40,7 +51,14 @@ const Invitation =(props)=>{
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        setShow(true);
+        setShowForm(true);
+    }
+    const handleNotComing=()=>{
+        setShowForm(false);
+    }
+
 
     const modal = () =>{
         return <Modal show={show} onHide={handleClose}>
@@ -65,15 +83,16 @@ const Invitation =(props)=>{
     const handleComingBox = (event) => {
             setComing(event.target.value)
     }
+
     const handleTransferBox = (event) => {
         setNeedTransfer(event.target.value)
     }
 
     return(
-        <div id={"invitation"}  className={"mainPageBlock chapter"}>
+        <div id={"invitation"}  className={"mainPageBlock"}>
             {modal()}
-                <Row >
-                    <Col xl={{span:4,offset:8}}>
+                <Row id={"invitationRow"}>
+                    <Col style={{display:accepted?'none':'block'}} xl={{span:4,offset:8}}>
                         <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.invitation}</span></h1>
                         <div>
                             <p className={"text-center site-text"}>Пожалуйста, заполните информацию о себе!</p>
@@ -91,9 +110,8 @@ const Invitation =(props)=>{
                                             value={true}
                                             feedback="You must agree before submitting."
                                         />
-
                                         <Form.Check
-
+                                            onClick={handleNotComing}
                                             inline
                                             type="radio"
                                             label="Не приду"
@@ -115,18 +133,18 @@ const Invitation =(props)=>{
                                     <Form.Label>Фамилия<sup>*</sup></Form.Label>
                                     <Form.Control onChange={event => setLastName(event.target.value)} required type="text"/>
                                 </Form.Group>
-                                <Form.Group controlId="email">
+                                <Form.Group style={{display:showForm?'block':'none'}}  id={"emailForm"} controlId="email">
                                     <Form.Label>Email<sup>*</sup></Form.Label>
-                                    <Form.Control onChange={event => setEmail(event.target.value)} required type="email"/>
+                                    <Form.Control onChange={event => setEmail(event.target.value)} required={showForm} type="email"/>
                                 </Form.Group>
-                                    <Form.Label>Для вашего удобства будет организован трансфер от метро .. время отправления ...</Form.Label>
-                                    <Form.Group as={Row}>
+                                    <Form.Label style={{display:showForm?'block':'none'}} id={"transferText"}>Для вашего удобства будет организован трансфер от метро .. время отправления ...</Form.Label>
+                                    <Form.Group style={{display:showForm?'block':'none'}} id={"transferForm"} as={Row}>
                                         <Form.Check
-                                            required
+                                            required={showForm}
                                             inline
                                             type="radio"
                                             label="Нужен трансфер"
-                                            name="formHorizontalRadios3"
+                                            name="formHorizontalRadios2"
                                             id="formHorizontalRadios3"
                                             onChange={event=>handleTransferBox(event)}
                                             value={true}
@@ -135,7 +153,7 @@ const Invitation =(props)=>{
                                             inline
                                             type="radio"
                                             label="Приеду сам"
-                                            name="formHorizontalRadios4"
+                                            name="formHorizontalRadios2"
                                             id="formHorizontalRadios4"
                                             onChange={event=>handleTransferBox(event)}
                                             value={false}
@@ -149,8 +167,16 @@ const Invitation =(props)=>{
                             <div  style={{"marginTop":"20px"}}><b>Просим Вас подтвердить своё присутствие на нашем празднике до <br/> 1 августа 2020</b></div>
                         </div>
                     </Col>
-
+                    <Col style={{display:accepted?'block':'none'}} xl={{span:4,offset:8}}>
+                        <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.invitation}</span></h1>
+                       <div>
+                           <p style={{"paddingTop":"10px"}} className={"text-center site-text"}>Спасибо за ответ! Мы направили вам информацию на почту.</p>
+                       </div>
+                    </Col>
                 </Row>
+
+
+
         </div>
     )
 }

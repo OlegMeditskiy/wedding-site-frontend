@@ -1,33 +1,55 @@
 import React, {useEffect, useState} from "react";
-import {Button, Form} from "react-bootstrap";
+import {Button, Form, Tab, Tabs} from "react-bootstrap";
 import {getPersonalInvitations} from "../../util/GetAPI";
-import {createPersonalInvitation} from "../../util/CreateAPI";
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCopy} from "@fortawesome/free-solid-svg-icons";
 import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory from 'react-bootstrap-table2-editor';
 import {deletePersonalInvitation} from "../../util/DeleteAPI";
 import {translation} from "../../constants";
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
+import paginationFactory from 'react-bootstrap-table2-paginator';
 
 
 const Invitations=(props)=>{
-
-    const [invitations,setInvitations]=useState([])
-
-
-
+    const [coming,setComing]=useState([])
+    const [notComing,setNotComing]=useState([])
     const getInvitations=()=>{
+
+        setComing([])
+        setNotComing([])
         let promise = getPersonalInvitations()
         promise
             .then(response => {
-                setInvitations(response)
-            }).catch(() => {
+                response.forEach((invitation)=>{
+                    console.log(invitation)
+
+                    if (invitation.coming){
+
+                        setComing(oldArray=>[...oldArray, invitation]);
+                    }
+                    else {
+
+                        setNotComing(oldArray=>[...oldArray,invitation]);
+                    }
+                    })
+            })
+    .catch(() => {
+
         });
+    }
+    const updateInvitations=()=>{
+        let promise = getPersonalInvitations()
+        promise
+            .then(response => {
+                setComing(response)
+            })
+            .catch(() => {
+
+            });
     }
 
     useEffect(() => {
        getInvitations();
+
     },[]);
 
     const deleteInvitation=(id,event)=> {
@@ -42,9 +64,6 @@ const Invitations=(props)=>{
             })
             .catch((error) => {
             });
-    }
-    function checkBoxFormatter(cell, row) {
-        return <Form.Check readOnly checked={cell}/>
     }
     function statusFormatter(cell, row) {
        if(cell===true){
@@ -70,16 +89,18 @@ const Invitations=(props)=>{
             </Form>
         </div>)
     }
-    const columns = [
+    const columnsComing = [
         {
             dataField: 'firstName',
             text: translation.table.firstName,
-            editable:false
+            editable:false,
+            sort: true
         },
         {
             dataField: 'lastName',
             text: translation.table.lastName,
-            editable:false
+            editable:false,
+            sort: true
         },
         {
             dataField: 'whoComingWithMe',
@@ -96,7 +117,8 @@ const Invitations=(props)=>{
             dataField: 'needTransfer',
             text: translation.table.transfer,
             formatter: transferFormatter,
-            editable:false
+            editable:false,
+            sort: true
         },
         {
             dataField: 'id',
@@ -106,12 +128,67 @@ const Invitations=(props)=>{
         },
 
     ];
-    const invitationsTable=()=>{
+    const columnsNotComing = [
+        {
+            dataField: 'firstName',
+            text: translation.table.firstName,
+            editable:false,
+            sort: true
+        },
+        {
+            dataField: 'lastName',
+            text: translation.table.lastName,
+            editable:false,
+            sort: true
+        },
+        {
+            dataField: 'coming',
+            text: translation.table.status,
+            formatter: statusFormatter,
+            editable:false
+        },
+        {
+            dataField: 'id',
+            text: translation.table.delete,
+            formatter:deleteFormatter,
+            editable:false
+        }
+
+    ];
+    const comingTable=()=>{
         return(
             <BootstrapTable
+                pagination={ paginationFactory({
+                    paginationSize: 10,
+                    showTotal:true,
+                    hideSizePerPage:true
+                }) }
+                striped
+                hover
+                condensed
                 keyField="id"
-                data={invitations}
-                columns={ columns }
+                data={coming}
+                columns={columnsComing}
+                cellEdit={cellEditFactory({
+                    mode: 'click'
+                })}
+            />
+        )
+    }
+    const notComingTable=()=>{
+        return(
+            <BootstrapTable
+                pagination={ paginationFactory({
+                    paginationSize: 10,
+                    showTotal:true,
+                    hideSizePerPage:true
+                }) }
+                striped
+                hover
+                condensed
+                keyField="id"
+                data={notComing}
+                columns={columnsNotComing}
                 cellEdit={cellEditFactory({
                     mode: 'click'
                 })}
@@ -122,7 +199,16 @@ const Invitations=(props)=>{
     return(
         <div className={"adminSiteBlock"}>
                 <h1>{translation.invitations}</h1>
-                {invitationsTable()}
+            <Tabs defaultActiveKey='coming' id="uncontrolled-tab-example">
+                <Tab eventKey="coming" title={"Приду"}>
+                    {comingTable()}
+                </Tab>
+                <Tab eventKey="notComing" title={"Не приду"}>
+                    {notComingTable()}
+                </Tab>
+            </Tabs>
+
+
         </div>
     )
 
