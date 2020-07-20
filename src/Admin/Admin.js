@@ -1,5 +1,5 @@
-import React,{Component} from "react";
-import {getCurrentUser} from "../util/GetAPI";
+import React, {Component, useState} from "react";
+import {getCurrentUser, getPersonalInvitations} from "../util/GetAPI";
 import {ACCESS_TOKEN} from "../constants";
 import addNotification from "react-push-notification";
 import {Route, Switch} from "react-router-dom";
@@ -55,6 +55,14 @@ class Admin extends Component {
         });
         this.props.history.push("/admin/login");
     }
+    getInvitations(){
+        let promise = getPersonalInvitations()
+        promise
+            .then(response => {
+            })
+            .catch(() => {
+            });
+    }
 
 
     handleLogin() {
@@ -68,6 +76,7 @@ class Admin extends Component {
 
     componentDidMount() {
         this.loadCurrentUser();
+        this.getInvitations();
     }
     render() {
         if (this.state.isLoading) {
