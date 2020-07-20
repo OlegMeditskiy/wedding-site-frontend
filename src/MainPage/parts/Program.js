@@ -2,11 +2,11 @@ import React, {useEffect, useState} from "react";
 import {getProgram} from "../../util/GetAPI";
 import {API_BASE_URL, translation} from "../../constants";
 import {Col, Image, Row} from "react-bootstrap";
-import guests from "../../assets/guests.png";
-import starters from "../../assets/starters.png";
-import arch from "../../assets/arch.png";
-import cake from "../../assets/cake.png";
-import DJ from "../../assets/DJ.png";
+import guests from "../../assets/guests2.png";
+import starters from "../../assets/starters2.png";
+import arch from "../../assets/arch2.png";
+import cake from "../../assets/cake2.png";
+import DJ from "../../assets/DJ2.png";
 import program from "../../assets/program1.jpg";
 
 const Program =(props)=>{
@@ -53,32 +53,32 @@ const Program =(props)=>{
     return(
         <div style={{"padding":"0px"}} id={"program"} className={"mainPageBlock evenBlock"}>
             <Row>
-                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} lg={6} xl={6}>
+                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={12} xl={6}>
                     <Image id={"programImage"}  src={program}/>
                 </Col>
-                <Col lg={6} xl={6}>
-                    <h1  style={{"marginBottom":"50px","marginTop":"30px"}} className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
+                <Col style={{"padding":"30px 0px"}} md={12} xl={6}>
+                    <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
 
-                    <h3 className={"text-center"}>29 августа</h3>
+                    <h3 style={{"padding":"10px 0px"}} className={"text-center"}>29 августа</h3>
                     <div className={"site-text"}>
                         <div className={"text-center"}>
-                            {/*<Image style={{"height":"50px"}} src={guests}></Image>*/}
+                            <Image style={{"height":"50px"}} src={guests}></Image>
                             <p>15:00 - Сбор гостей</p>
                         </div>
                         <div className={"text-center"}>
-                            {/*<Image style={{"height":"50px"}} src={starters}></Image>*/}
+                            <Image style={{"height":"50px"}} src={starters}></Image>
                             <p>Приветственный фуршет</p>
                         </div>
                         <div className={"text-center"}>
-                            {/*<Image style={{"height":"50px"}} src={arch}></Image>*/}
+                            <Image style={{"height":"50px"}} src={arch}></Image>
                             <p>16:00 - Торжественная церемония</p>
                         </div>
                         <div className={"text-center"}>
-                            {/*<Image style={{"height":"50px"}} src={cake}></Image>*/}
+                            <Image style={{"height":"50px"}} src={cake}></Image>
                             <p>Праздничный ужин</p>
                         </div>
                         <div className={"text-center"}>
-                            {/*<Image style={{"height":"50px"}} src={DJ}></Image>*/}
+                            <Image style={{"height":"50px"}} src={DJ}></Image>
                             <p>Веселье и танцы до упаду</p>
                         </div></div>
                 </Col>
