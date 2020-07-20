@@ -3,7 +3,7 @@ import {getDressCode} from "../../util/GetAPI";
 import {Col, Image, Row} from "react-bootstrap";
 import {API_BASE_URL, translation} from "../../constants";
 import dressCode from "../../assets/colors.png"
-import gift from "../../assets/gift2.jpeg"
+import gift from "../../assets/gift.jpg"
 const DressCode = (props)=>{
 
     const returnRead=()=>{
