@@ -95,7 +95,7 @@ const Invitation =(props)=>{
                     <Col style={{display:accepted?'none':'block'}} xl={{span:4,offset:8}}>
                         <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.invitation}</span></h1>
                         <div>
-                            <p className={"text-center site-text"}>Пожалуйста, заполните информацию о себе!</p>
+                            <p id={"please"} className={"text-center site-text"}>Пожалуйста, заполните информацию о себе!</p>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group as={Row}>
                                         <Form.Check
@@ -137,7 +137,7 @@ const Invitation =(props)=>{
                                     <Form.Label>Email<sup>*</sup></Form.Label>
                                     <Form.Control onChange={event => setEmail(event.target.value)} required={showForm} type="email"/>
                                 </Form.Group>
-                                    <Form.Label style={{display:showForm?'block':'none'}} id={"transferText"}>Для вашего удобства будет организован трансфер от метро .. время отправления ...</Form.Label>
+                                    <Form.Label style={{display:showForm?'block':'none'}} id={"transferText"}>Для вашего удобства будет организован трансфер от метро Перово время отправления 14:00</Form.Label>
                                     <Form.Group style={{display:showForm?'block':'none'}} id={"transferForm"} as={Row}>
                                         <Form.Check
                                             required={showForm}
@@ -164,7 +164,7 @@ const Invitation =(props)=>{
                                     Отправить
                                 </Button>
                             </Form>
-                            <div  style={{"marginTop":"20px"}}><b>Просим Вас подтвердить своё присутствие на нашем празднике до <br/> 1 августа 2020</b></div>
+                            <div  style={{"marginTop":"20px"}}><b>Просим Вас подтвердить своё присутствие на нашем празднике до 1 августа 2020</b></div>
                         </div>
                     </Col>
                     <Col style={{display:accepted?'block':'none'}} xl={{span:4,offset:8}}>

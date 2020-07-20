@@ -53,10 +53,10 @@ const Program =(props)=>{
     return(
         <div style={{"padding":"0px"}} id={"program"} className={"mainPageBlock evenBlock"}>
             <Row>
-                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} md={12} xl={6}>
+                <Col id="rings"style={{"paddingLeft":"0px","paddingRight":"0px","overflow":"hidden"}} xs={12} sm={12} xl={6}>
                     <Image id={"programImage"}  src={program}/>
                 </Col>
-                <Col style={{"padding":"30px 0px"}} md={12} xl={6}>
+                <Col style={{"padding":"30px 0px"}} xs={12} sm={12} xl={6} >
                     <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.program}</span></h1>
 
                     <h3 style={{"padding":"10px 0px"}} className={"text-center"}>29 августа</h3>
