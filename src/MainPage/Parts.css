@@ -519,7 +519,6 @@
         width: 90px;
         height: 90px;
     }
-    h2{font-size: 2em!important;}
     #dressCodeImage1{
         display: block;
         background-color: #392317!important;
@@ -566,7 +565,8 @@
     }
 }
 @media only screen and (min-width: 1200px) {
-    h2{font-size: 2em!important;}
+    h2{font-size: 2em!important;
+        font-weight: 500!important;}
 #gift{
     width: 25%;
 }
@@ -604,7 +604,7 @@
         width: 90px;
         height: 90px;
     }
-    h2{font-size: 2em!important;}
+
     #dressCodeImage1{
         display: block;
         background-color: #392317!important;
