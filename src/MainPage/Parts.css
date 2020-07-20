@@ -189,6 +189,8 @@
 
 }
 @media only screen and (min-width: 320px){
+    h2{font-size: 17px!important;
+        font-weight: 600!important;}
     #gift{
         width: 60%;
     }
@@ -227,7 +229,7 @@
         width: 100%;
     }
 
-    h2{font-size: 17px!important;}
+
 
     .beforeMap{
         position: absolute;
@@ -411,6 +413,8 @@
         padding: 10px;
         font-size: 20px;
     }
+    h2{font-size: 2em!important;
+        font-weight: 500!important;}
     #dressCodeImage2{
         display: inline-block;
     }
@@ -463,7 +467,8 @@
         width: 75px;
         height: 75px;
     }
-    h2{font-size: 2em!important;}
+    h2{font-size: 2em!important;
+        font-weight: 500!important;}
     #dressCodeImage1{
         display: block;
         background-color: #392317!important;
@@ -561,6 +566,7 @@
     }
 }
 @media only screen and (min-width: 1200px) {
+    h2{font-size: 2em!important;}
 #gift{
     width: 25%;
 }
