@@ -152,7 +152,8 @@
     position: absolute;
     left: 7%;
     top: 5%;
-    background: #2a221f;
+    background: black;
+    color: white;
     padding: 30px;
 }
 
@@ -186,7 +187,21 @@
     }
 
 }
-@media (min-width: 320px) {
+@media only screen and (min-width: 320px){
+    #gift{
+        width: 100%;
+    }
+    #invitation{
+        background-color: white;
+        color: black;
+    }
+}
+@media only screen and (min-width: 320px) and (max-height: 568px){
+
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
     #story1{
         text-align: center;
     }
@@ -200,8 +215,7 @@
         display: none;
     }
     .aboutUsImage{
-        margin: -10% 0% 0% -19%;
-        width: 119%;
+        width: 100%;
     }
     #programImage{
         width: 100%;
@@ -220,10 +234,7 @@
         padding: 5px;
         font-size: 12px;
     }
-    #invitation{
-        background-color: white;
-        color: black;
-    }
+
     #dressCodeImage1{
         display: none;
     }
@@ -248,8 +259,60 @@
         margin: 0 15px;
     }
 }
-@media (min-width: 375px) {
+@media only screen and (min-width: 375px) and (max-height: 667px){
 
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
+    .beforeMap{
+        position: absolute;
+        left: 11%;
+        top: 3%;
+        padding: 5px;
+        font-size: 13px;
+    }
+    .blockText{
+        bottom: 0px;
+        left: -408px;
+    }
+    .hashtag{
+        font-size: 21px;
+    }
+    .datePlace{font-size: 16px}
+    .timer{font-size: 20px}
+    .circle{
+        width: 55px;
+        height: 55px;
+    }
+    .Countdown-col-element{
+        margin: 0 15px;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
+
+}
+@media only screen and (min-width: 375px) and (max-height: 812px){
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
     .beforeMap{
         position: absolute;
         left: 11%;
@@ -274,8 +337,26 @@
         margin: 0 15px;
     }
 
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
 }
-@media (min-width: 414px) {
+@media only screen and (min-width: 414px) and (max-height: 736px){
     .beforeMap{
         position: absolute;
         left: 13%;
@@ -299,17 +380,26 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
-}
-@media (max-width: 414px) {
-    .header {
-        margin: 8% -15% -30% -12%;
-        width: 190%;
+    #story1{
+        text-align: center;
     }
-    .timerBlock{
-        /*padding-top: 1000px;*/
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
     }
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-height: 1024px){
     .beforeMap {
         position: absolute;
         left: 8%;
@@ -336,11 +426,39 @@
     .Countdown-col-element{
         margin: 0 20px;
     }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
 }
-@media (min-width: 1024px) {
-
-
-
+@media only screen and (min-width: 1024px) and (max-height: 1366px){
+    .blockText{
+        bottom: 183px;
+        left: -52px;
+    }
+    .hashtag{
+        font-size: 30px;
+    }
+    .datePlace{font-size: 30px}
+    .timer{font-size: 30px}
+    .circle{
+        width: 75px;
+        height: 75px;
+    }
     h2{font-size: 2em!important;}
     #dressCodeImage1{
         display: block;
@@ -350,19 +468,7 @@
         display: none;
     }
 
-    .blockText{
-        bottom: 33px;
-        left: -80px;
-    }
-    .hashtag{
-        font-size: 50px;
-    }
-    .datePlace{font-size: 40px}
-    .timer{font-size: 50px}
-    .circle{
-        width: 125px;
-        height: 125px;
-    }
+
     .Countdown-col-element{
         margin: 0 20px;
     }
@@ -370,35 +476,280 @@
         margin: 2% -15% -32% -5%;
         width: 166%;
     }
-}
-@media (min-width: 1200px) {
-    #programImage {
-        width: 124%;
-    }
     #story1{
-        text-align: left;
+        text-align: center;
     }
     #story2{
-        text-align: right;
+        text-align: center;
     }
     #aboutUsImage1{
-        display: none;
-    }
-    #aboutUsImage2{
         display: block;
     }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1366px) and (max-height: 768px){
+    .blockText{
+        bottom: 393px;
+        left: 141px;
+
+    }
+    .hashtag{
+        font-size: 33px;
+    }
+    .datePlace{font-size: 33px}
+    .timer{font-size: 33px}
+    .circle{
+        width: 90px;
+        height: 90px;
+    }
+    h2{font-size: 2em!important;}
+    #dressCodeImage1{
+        display: block;
+        background-color: #392317!important;
+    }
+    #dressCodeImage2{
+        display: none;
+    }
+
+
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    .header {
+        margin: 2% -15% -32% -5%;
+        width: 166%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
+    div.col-xl-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 1200px) {
+#gift{
+    width: 30%;
+}
+    #invitation{
+        color: white;
+    }
+    #please{font-size: 19px}
+    /*#story1{*/
+    /*    text-align: left;*/
+    /*}*/
+    /*#story2{*/
+    /*    text-align: right;*/
+    /*}*/
+
+    /*#aboutUsImage1{*/
+    /*    display: none;*/
+    /*}*/
+    /*#aboutUsImage2{*/
+    /*    display: block;*/
+    /*}*/
     #invitation{
         background-image: url("../assets/invite5.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center top;
+        color: white;
     }
 
     #acceptButton{
-        background-color:#4e4038;
-        border-color:#4e4038}
+        background-color:black;
+        border-color:black;
+        color: white;
+    }
 }
-@media (min-width: 1920px) {
+@media only screen and (min-width: 1440px) and (max-height: 900px) {
+    .blockText{
+        bottom: 410px;
+        left: 170px;
+    }
+    .hashtag{
+        font-size: 35px;
+    }
+    .datePlace{font-size: 35px}
+    .timer{font-size: 35px}
+    .circle{
+        width: 90px;
+        height: 90px;
+    }
+    h2{font-size: 2em!important;}
+    #dressCodeImage1{
+        display: block;
+        background-color: #392317!important;
+    }
+    #dressCodeImage2{
+        display: none;
+    }
+
+
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    .header {
+        margin: 2% -15% -32% -5%;
+        width: 166%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
+    div.col-xl-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    /*.header {*/
+    /*    height: auto;*/
+    /*    margin: 2% -15% -19% -1%;*/
+    /*    width: 125%;*/
+    /*}*/
+    /*.blockText{*/
+    /*    bottom: 33px;*/
+    /*    left: -80px;*/
+    /*}*/
+    /*.hashtag{*/
+    /*    font-size: 50px;*/
+    /*}*/
+    /*.datePlace{font-size: 40px}*/
+    /*.timer{font-size: 50px}*/
+    /*.circle{*/
+    /*    width: 125px;*/
+    /*    height: 125px;*/
+    /*}*/
+
+}
+@media only screen and (min-width: 1680px) and (max-height: 1050px) {
+    .blockText{
+        bottom: 516px;
+        left: 167px;
+    }
+    .hashtag{
+        font-size: 40px;
+    }
+    .datePlace{font-size: 40px}
+    .timer{font-size: 40px}
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    h2{font-size: 2em!important;}
+    #dressCodeImage1{
+        display: block;
+        background-color: #392317!important;
+    }
+    #dressCodeImage2{
+        display: none;
+    }
+
+
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    .header {
+        margin: 2% -15% -32% -5%;
+        width: 166%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+    .aboutUsImage{
+        width: 100%;
+    }
+    #programImage{
+        width: 100%;
+    }
+    div.col-xl-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    /*.header {*/
+    /*    height: auto;*/
+    /*    margin: 2% -15% -19% -1%;*/
+    /*    width: 125%;*/
+    /*}*/
+    /*.blockText{*/
+    /*    bottom: 33px;*/
+    /*    left: -80px;*/
+    /*}*/
+    /*.hashtag{*/
+    /*    font-size: 50px;*/
+    /*}*/
+    /*.datePlace{font-size: 40px}*/
+    /*.timer{font-size: 50px}*/
+    /*.circle{*/
+    /*    width: 125px;*/
+    /*    height: 125px;*/
+    /*}*/
+
+}
+@media only screen and (min-width: 1920px) {
     #invitationRow{
         height: 603px;
     }
@@ -409,6 +760,15 @@
 
     #invitation{
         color: white;
+    }
+    #aboutUsImage1{
+        display: none;
+    }
+    #aboutUsImage2{
+        display: block;
+    }
+    #programImage{
+        width: 124%;
     }
 
     .blockText{
@@ -432,11 +792,12 @@
         margin: 2% -15% -37% -1%;
         width: 125%;
     }
+    div.col-xl-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
-@media (min-width: 769px) {
-
-}
 
 @media (min-width: 576px){
     .timerBlock {

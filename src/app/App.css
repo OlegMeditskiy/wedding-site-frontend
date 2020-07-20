@@ -7,6 +7,12 @@
     background: #f8f9fa;
     color: white;
 }
+p{
+    font-family: 'Playfair Display', serif;
+}
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+}
 .languageButton{
     background-color: #e2e2e2!important;
     border-color: #e2e2e2!important;
