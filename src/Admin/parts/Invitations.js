@@ -36,16 +36,6 @@ const Invitations=(props)=>{
 
         });
     }
-    const updateInvitations=()=>{
-        let promise = getPersonalInvitations()
-        promise
-            .then(response => {
-                setComing(response)
-            })
-            .catch(() => {
-
-            });
-    }
 
     useEffect(() => {
        getInvitations();
