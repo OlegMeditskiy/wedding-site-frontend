@@ -564,19 +564,7 @@
         color: white;
     }
     #please{font-size: 19px}
-    /*#story1{*/
-    /*    text-align: left;*/
-    /*}*/
-    /*#story2{*/
-    /*    text-align: right;*/
-    /*}*/
 
-    /*#aboutUsImage1{*/
-    /*    display: none;*/
-    /*}*/
-    /*#aboutUsImage2{*/
-    /*    display: block;*/
-    /*}*/
     #invitation{
         background-image: url("../assets/invite5.jpg");
         background-size: 100% auto;
@@ -729,24 +717,7 @@
     #story2{
         text-align: center;
     }
-    /*.header {*/
-    /*    height: auto;*/
-    /*    margin: 2% -15% -19% -1%;*/
-    /*    width: 125%;*/
-    /*}*/
-    /*.blockText{*/
-    /*    bottom: 33px;*/
-    /*    left: -80px;*/
-    /*}*/
-    /*.hashtag{*/
-    /*    font-size: 50px;*/
-    /*}*/
-    /*.datePlace{font-size: 40px}*/
-    /*.timer{font-size: 50px}*/
-    /*.circle{*/
-    /*    width: 125px;*/
-    /*    height: 125px;*/
-    /*}*/
+
 
 }
 @media only screen and (min-width: 1920px) {
