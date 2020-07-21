@@ -273,9 +273,10 @@
 
 }
 @media (min-width:600px)  {
-
-
-
+    .circle {
+        width: 9vw;
+        height: 9vw;
+    }
     .blockText{
         bottom: 31%;
         left: 8%;
