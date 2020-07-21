@@ -20,7 +20,6 @@ const Invitations=(props)=>{
         promise
             .then(response => {
                 response.forEach((invitation)=>{
-                    console.log(invitation)
 
                     if (invitation.coming){
 

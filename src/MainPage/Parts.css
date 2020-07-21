@@ -171,6 +171,11 @@
 */
 
 @media (min-width:320px)  {
+    #okButton{
+        border-color: black;
+        background-color: black;
+        color: white;
+    }
         h2{font-size: 4vw!important;
             font-weight: 600!important;}
         #gift{
@@ -305,6 +310,10 @@
     }
 }
 @media (min-width:1025px) {
+    .inviteHeadline:after
+    {
+        border:1px solid #ffffff;
+      }
     .blockText{
         bottom: 37%;
         left: 8%;
@@ -326,6 +335,7 @@
         background-repeat: no-repeat;
         background-position: center top;
         color: white;
+        height: 730px;
     }
 
 }
