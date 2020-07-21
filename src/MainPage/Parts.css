@@ -802,6 +802,114 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 100%;
     }
 }
+@media
+(min-device-width: 800px)
+and (max-device-width: 1280px)
+and (-webkit-min-device-pixel-ratio: 1) {
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
+    .beforeMap {
+        position: absolute;
+        left: 8%;
+        top: 3%;
+        padding: 10px;
+        font-size: 20px;
+    }
+    h2{font-size: 2em!important;
+        font-weight: 500!important;}
+    #dressCodeImage2{
+        display: inline-block;
+    }
+    .blockText{
+        bottom: 150px;
+        left: -163px;
+
+    }
+    .hashtag{
+        font-size: 35px;
+    }
+    .datePlace{font-size: 30px}
+    .timer{font-size: 40px}
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+
+    #programImage{
+        width: 100%;
+    }
+}
+@media
+(min-device-width: 600px)
+and (max-device-width: 960px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
+    .beforeMap {
+        position: absolute;
+        left: 8%;
+        top: 3%;
+        padding: 10px;
+        font-size: 20px;
+    }
+    h2{font-size: 2em!important;
+        font-weight: 500!important;}
+    #dressCodeImage2{
+        display: inline-block;
+    }
+    .blockText{
+        bottom: 126px;
+        left: -286px;
+
+    }
+    .hashtag{
+        font-size: 25px;
+    }
+    .datePlace{font-size: 25px}
+    .timer{font-size: 25px}
+    .circle{
+        width: 70px;
+        height: 70px;
+    }
+    .Countdown-col-element{
+        margin: 0 20px;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+
+    #programImage{
+        width: 100%;
+    }
+}
 @media only screen and (min-width: 1024px) and (max-height: 1366px){
     .blockText{
         bottom: 183px;
