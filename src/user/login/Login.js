@@ -54,22 +54,22 @@ class Login extends Component{
     render() {
         return(
             <div className="login-container">
-                <h1 className="page-title">Login</h1>
+                <h1 className="page-title">Логин</h1>
                 <div style={{"height":"calc(100vh - 146px)"}} className="login-content">
                     <Form
                         name="normal_login"
                         className="login-form"
                         onSubmit={this.handleSubmit}>
                         <Form.Group controlId="username">
-                            <Form.Label>Username</Form.Label>
+                            <Form.Label>Имя пользователя</Form.Label>
                             <Form.Control type="text" onChange={this.handleChange} name={"username"} placeholder="Введите имя пользователя" />
                         </Form.Group>
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control onChange={this.handleChange} name={"password"} type="password" placeholder="Password" />
+                            <Form.Label>Пароль</Form.Label>
+                            <Form.Control onChange={this.handleChange} name={"password"} type="password" placeholder="Введите пароль" />
                         </Form.Group>
                         <Button type="submit" className="login-form-button">
-                            Logga in
+                            Войти
                         </Button>
                     </Form>
                 </div>
