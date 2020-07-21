@@ -97,12 +97,6 @@ const Invitations=(props)=>{
             editable:false
         },
         {
-            dataField: 'coming',
-            text: translation.table.status,
-            formatter: statusFormatter,
-            editable:false
-        },
-        {
             dataField: 'needTransfer',
             text: translation.table.transfer,
             formatter: transferFormatter,
@@ -129,12 +123,6 @@ const Invitations=(props)=>{
             text: translation.table.lastName,
             editable:false,
             sort: true
-        },
-        {
-            dataField: 'coming',
-            text: translation.table.status,
-            formatter: statusFormatter,
-            editable:false
         },
         {
             dataField: 'id',
