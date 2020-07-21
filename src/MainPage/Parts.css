@@ -354,6 +354,62 @@
         margin: 0 15px;
     }
 }
+@media screen and (device-width: 360px) and (device-height: 760px) and (-webkit-device-pixel-ratio: 4) {
+    .header {
+        margin: 8% -15% -30% -12%;
+        width: 190%;
+    }
+    #story1{
+        text-align: center;
+    }
+    #story2{
+        text-align: center;
+    }
+    #aboutUsImage1{
+        display: block;
+    }
+    #aboutUsImage2{
+        display: none;
+    }
+
+    #programImage{
+        width: 100%;
+    }
+
+    .beforeMap{
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        background: black;
+        color: white;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #dressCodeImage1{
+        display: none;
+    }
+    #dressCodeImage2{
+        display: block;
+    }
+
+    .blockText{
+        bottom: 22px;
+        left: -418px;
+    }
+    .hashtag{
+        font-size: 21px;
+    }
+    .datePlace{font-size: 14px}
+    .timer{font-size: 14px}
+    .circle{
+        width: 40px;
+        height: 40px;
+    }
+    .Countdown-col-element{
+        margin: 0 15px;
+    }
+}
 @media screen and (device-width: 411px) and (device-height: 731px) and (-webkit-device-pixel-ratio: 3){
     .header {
         margin: 8% -15% -30% -12%;
