@@ -37,9 +37,6 @@ const Place =(props)=>{
                             </div>
                         </div>
                     </Col>
-                    {/*<Col style={{"paddingLeft":"0","paddingRight":"0"}} md={6}>*/}
-                    {/*    <Image  style={{"width":"100%"}} src={artiland}/>*/}
-                    {/*</Col>*/}
                 </Row>
         </div>
     )

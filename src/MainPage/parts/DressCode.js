@@ -9,7 +9,7 @@ const DressCode = (props)=>{
     const returnRead=()=>{
         return(
             <div>
-                <h1 style={{"padding":"30px 0px 0px 0px"}} className={"text-center title"}><span className={"headline"}>Детали</span></h1>
+                <h1 id={"details"} style={{"padding":"30px 0px 0px 0px"}} className={"text-center title"}><span className={"headline"}>Детали</span></h1>
                 <Row>
                     {/*<Col id={"dressCodeImage1"} className={"text-center"} lg={6} xl={6}>*/}
                     {/*    <Image style={{"max-width":"100%"}} src={dressCode}/>*/}
@@ -38,7 +38,7 @@ const DressCode = (props)=>{
         )
     }
     return(
-        <div id={"dressCode"} style={{"padding":"0px"}} className={"mainPageBlock odBlock"}>
+        <div style={{"padding":"0px"}} className={"mainPageBlock odBlock"}>
             {returnRead()}
         </div>
     )

@@ -12,10 +12,8 @@ import Navigation from "./parts/Navigation";
 const MainPage = (props) => {
     return (
         <div>
-            {/*{(this.props.isAuthenticated===true)?<a href="/admin"><Button className={"adminButton"}><FontAwesomeIcon icon={faUserShield} className={"icon"}/>{menuHeaders.adminPanel}</Button></a>:null}*/}
             <Navigation/>
             <Header/>
-            {/*<AboutUs/>*/}
             <OurStory/>
             <Program/>
             <DressCode/>
