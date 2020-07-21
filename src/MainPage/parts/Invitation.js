@@ -17,6 +17,7 @@ const Invitation =(props)=>{
     const [accepted,setAccepted]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault();
+        setAccepted(true);
         let request;
         if (coming){
             request = {
@@ -41,7 +42,6 @@ const Invitation =(props)=>{
 
         createPersonalInvitation(request)
             .then(() => {
-                setAccepted(true);
             })
             .catch((error) => {
 
