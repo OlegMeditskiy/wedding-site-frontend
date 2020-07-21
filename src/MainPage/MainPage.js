@@ -5,7 +5,7 @@ import OurStory from "./parts/OurStory";
 import Program from "./parts/Program";
 import Place from "./parts/Place";
 import Invitation from "./parts/Invitation";
-import './Parts.css?v7'
+import './Parts.css?v8'
 import DressCode from "./parts/DressCode";
 import Navigation from "./parts/Navigation";
 

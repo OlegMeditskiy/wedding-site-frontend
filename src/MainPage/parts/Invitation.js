@@ -137,7 +137,7 @@ const Invitation =(props)=>{
                                     <Form.Label>Email<sup>*</sup></Form.Label>
                                     <Form.Control onChange={event => setEmail(event.target.value)} required={showForm} type="email"/>
                                 </Form.Group>
-                                    <Form.Label style={{display:showForm?'block':'none'}} id={"transferText"}>Для вашего удобства будет организован трансфер от метро Перово время отправления 14:00</Form.Label>
+                                    <Form.Label style={{display:showForm?'block':'none'}} id={"transferText"}>Для вашего удобства будет организован трансфер от метро Перово, время отправления - 14:00</Form.Label>
                                     <Form.Group style={{display:showForm?'block':'none'}} id={"transferForm"} as={Row}>
                                         <Form.Check
                                             required={showForm}
