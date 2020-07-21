@@ -14,12 +14,15 @@ const Invitation =(props)=>{
     const [needTransfer,setNeedTransfer]=useState(false)
     const [whoComingWithMe,setWhoComingWithMe]=useState('')
     const [showForm,setShowForm]=useState(true)
+    const [answered,setAnswered]=useState(false)
     const [accepted,setAccepted]=useState(false)
+    const [notAccepted,setNotAccepted]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault();
-        setAccepted(true);
+        setAnswered(true);
         let request;
-        if (coming){
+        if (coming===true){
+            setAccepted(true);
             request = {
                 coming:coming,
                 firstName:firstName,
@@ -30,6 +33,7 @@ const Invitation =(props)=>{
             }
         }
         else {
+            setNotAccepted(true);
             request = {
                 coming:coming,
                 firstName:firstName,
@@ -39,14 +43,12 @@ const Invitation =(props)=>{
                 whoComingWithMe:''
             }
         }
-
         createPersonalInvitation(request)
             .then(() => {
             })
             .catch((error) => {
 
             });
-        console.log(request)
     }
     const [show, setShow] = useState(false);
 
@@ -70,10 +72,7 @@ const Invitation =(props)=>{
                 <textarea style={{"width": "100%","height": "100px"}} value={whoComingWithMe} onChange={event=>setWhoComingWithMe(event.target.value)}></textarea>
             </Modal.Body>
             <Modal.Footer>
-                {/*<Button variant="secondary" onClick={handleClose}>*/}
-                {/*    Закрыть*/}
-                {/*</Button>*/}
-                <Button variant="primary" onClick={handleClose}>
+                <Button id={"okButton"} variant="primary" onClick={handleClose}>
                     ОК
                 </Button>
             </Modal.Footer>
@@ -92,8 +91,8 @@ const Invitation =(props)=>{
         <div id={"invitation"}  className={"mainPageBlock"}>
             {modal()}
                 <Row id={"invitationRow"}>
-                    <Col style={{display:accepted?'none':'block'}} xl={{span:4,offset:8}}>
-                        <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.invitation}</span></h1>
+                    <Col style={{display:answered?'none':'block'}} xl={{span:4,offset:8}}>
+                        <h1 className={"text-center title"}><span className={"headline inviteHeadline"}>{translation.menu.invitation}</span></h1>
                         <div>
                             <p id={"please"} className={"text-center site-text"}>Пожалуйста, заполните информацию о себе!</p>
                             <Form onSubmit={handleSubmit}>
@@ -168,10 +167,16 @@ const Invitation =(props)=>{
                         </div>
                     </Col>
                     <Col style={{display:accepted?'block':'none'}} xl={{span:4,offset:8}}>
-                        <h1 className={"text-center title"}><span className={"headline"}>{translation.menu.invitation}</span></h1>
+                        <h1 className={"text-center title"}><span className={"headline inviteHeadline"}>{translation.menu.invitation}</span></h1>
                        <div>
                            <p style={{"paddingTop":"10px"}} className={"text-center site-text"}>Спасибо за ответ! Мы направили вам информацию на почту.</p>
                        </div>
+                    </Col>
+                    <Col style={{display:notAccepted?'block':'none'}} xl={{span:4,offset:8}}>
+                        <h1 className={"text-center title"}><span className={"headline inviteHeadline"}>{translation.menu.invitation}</span></h1>
+                        <div>
+                            <p style={{"paddingTop":"10px"}} className={"text-center site-text"}>Спасибо за ответ!</p>
+                        </div>
                     </Col>
                 </Row>
 
