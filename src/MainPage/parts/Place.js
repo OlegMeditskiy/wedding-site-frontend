@@ -31,7 +31,7 @@ const Place =(props)=>{
                         <div className={"beforeMap"}>
                             <div id={"beforeMapText"} className={"text-center"}>
                                 <p>
-                                    Загородный клуб «Artiland”
+                                    Загородный клуб «Artiland»
                                 </p>
                                 <p>Московская область, Балашиха,  Новское шоссе, 10.</p>
                             </div>
