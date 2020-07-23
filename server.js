@@ -1,5 +1,3 @@
-import {API_BASE_URL} from "./src/constants";
-
 const express = require('express');
 const favicon = require('express-favicon');
 const path = require('path');
