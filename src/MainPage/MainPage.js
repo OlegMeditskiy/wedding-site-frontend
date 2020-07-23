@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import Header from "./parts/Header.js?v1";
-import OurStory from "./parts/OurStory.js?v1";
-import Program from "./parts/Program.js?v1";
-import Place from "./parts/Place.js?v1";
-import Invitation from "./parts/Invitation.js?v2";
+import Header from "./parts/Header.js";
+import OurStory from "./parts/OurStory.js";
+import Program from "./parts/Program.js";
+import Place from "./parts/Place.js";
+import Invitation from "./parts/Invitation.js";
 import './Parts.css?v11'
-import DressCode from "./parts/DressCode.js?v1";
-import Navigation from "./parts/Navigation.js?v1";
+import DressCode from "./parts/DressCode.js";
+import Navigation from "./parts/Navigation.js";
 
 const MainPage = (props) => {
     return (
