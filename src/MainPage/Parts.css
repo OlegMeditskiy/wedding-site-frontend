@@ -329,6 +329,9 @@
         border-color:white;
         color: black;
     }
+
+}
+@media (min-width:1281px) {
     #invitation{
         background-image: url("../assets/invite5.jpg");
         background-size: 100% auto;
@@ -337,9 +340,6 @@
         color: white;
         height: 730px;
     }
-
-}
-@media (min-width:1281px) {
     .circle {
         width: 7vw;
         height: 7vw;

@@ -10,7 +10,7 @@ import {getCurrentUser} from "../util/GetAPI";
 import AdminPage from "../Admin/AdminPage";
 import addNotification, {Notifications} from 'react-push-notification';
 import {Button, Col, Container, Image, Row} from "react-bootstrap";
-import MainPage from "../MainPage/MainPage?v1";
+import MainPage from "../MainPage/MainPage";
 import Admin from "../Admin/Admin";
 
 class App extends Component {
