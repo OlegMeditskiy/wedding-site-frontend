@@ -170,7 +170,7 @@
 * === MOBILE ===
 */
 
-@media (min-width:320px)  {
+@media only screen and (min-width:320px)  {
     #okButton{
         border-color: black;
         background-color: black;
@@ -249,7 +249,7 @@
             margin: 0 15px;
         }
 }
-@media (min-width:480px)  {
+@media only screen and (min-width:480px)  {
     .beforeMap{
         position: absolute;
         left: 26%;
@@ -274,7 +274,7 @@
     }
 
 }
-@media (min-width:600px)  {
+@media only screen and (min-width:600px)  {
     .circle {
         width: 9vw;
         height: 9vw;
@@ -287,7 +287,7 @@
         font-size: 3.5vw;
     }
 }
-@media (min-width:801px)  {
+@media only screen and (min-width:801px)  {
 
     .beforeMap{
         position: absolute;
@@ -309,7 +309,7 @@
         margin: 6% -15% -30% -12%;
     }
 }
-@media (min-width:1025px) {
+@media only screen and (min-width:1025px) {
     .inviteHeadline:after
     {
         border:1px solid #ffffff;
@@ -329,6 +329,9 @@
         border-color:white;
         color: black;
     }
+
+}
+@media only screen and (min-width:1281px) {
     #invitation{
         background-image: url("../assets/invite5.jpg");
         background-size: 100% auto;
@@ -337,9 +340,6 @@
         color: white;
         height: 730px;
     }
-
-}
-@media (min-width:1281px) {
     .circle {
         width: 7vw;
         height: 7vw;
