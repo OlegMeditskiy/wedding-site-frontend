@@ -21,7 +21,7 @@ const Invitation =(props)=>{
         event.preventDefault();
         setAnswered(true);
         let request;
-        if (coming===true){
+        if (coming){
             setAccepted(true);
             request = {
                 coming:coming,
@@ -80,11 +80,22 @@ const Invitation =(props)=>{
     }
 
     const handleComingBox = (event) => {
-            setComing(event.target.value)
+        if (event.target.value==="false"){
+            setComing(false)
+        }
+        else {
+            setComing(true)
+        }
+
     }
 
     const handleTransferBox = (event) => {
-        setNeedTransfer(event.target.value)
+        if (event.target.value==="false"){
+            setNeedTransfer(false)
+        }
+        else {
+            setNeedTransfer(true)
+        }
     }
 
     return(
