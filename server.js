@@ -23,6 +23,12 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 app.listen(port,()=>{
-    wakeDyno(DYNO_URL).start();
-    wakeDyno(DYNO_URL2).start();
+    wakeDyno({
+        url:DYNO_URL,
+        interval:300000
+    }).start();
+    wakeDyno({
+        url:DYNO_URL2,
+        interval:300000
+    }).start();
 });
